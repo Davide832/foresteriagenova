@@ -1,0 +1,24 @@
+{
+  "appartamenti": {
+    "bolzaneto": {
+      "occupato": true,
+      "fino_al": "2027-03-31"
+    },
+    "sampierdarena_a": {
+      "occupato": false,
+      "fino_al": ""
+    },
+    "sampierdarena_b": {
+      "occupato": false,
+      "fino_al": ""
+    },
+    "sestri": {
+      "occupato": true,
+      "fino_al": "2027-07-31"
+    },
+    "sampierdarena_c": {
+      "occupato": true,
+      "fino_al": "2027-12-31"
+    }
+  }
+}
