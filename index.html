@@ -117,7 +117,7 @@
 
     /* ── HERO ── */
     #hero {
-      min-height: 100vh;
+      min-height: 72vh;
       display: grid;
       grid-template-columns: 1fr 1fr;
       padding-top: 80px;
@@ -431,14 +431,14 @@
       margin-bottom: 1.5rem;
     }
     .apt-features {
-      display: flex; gap: 1.5rem;
-      margin-bottom: 1.5rem;
+      display: flex; flex-wrap: wrap; gap: .8rem 1.2rem;
+      margin-bottom: 1.2rem;
       border-top: 1px solid var(--warm);
       padding-top: 1.2rem;
     }
     .apt-feat {
-      display: flex; align-items: center; gap: .4rem;
-      font-size: .75rem;
+      display: flex; align-items: center; gap: .35rem;
+      font-size: .73rem;
       color: var(--light);
       white-space: nowrap;
     }
@@ -1150,6 +1150,64 @@
       letter-spacing: .05em;
     }
 
+    /* ── HERO CAROUSEL ── */
+    .hero-carousel { position: relative; width: 100%; height: 100%; }
+    .hero-carousel-slide {
+      position: absolute; inset: 0;
+      opacity: 0; transition: opacity 1s ease;
+    }
+    .hero-carousel-slide.active { opacity: 1; }
+    .hero-carousel-dots {
+      position: absolute; bottom: 1.2rem; right: 1.2rem;
+      display: flex; gap: .4rem; z-index: 3;
+    }
+    .hero-carousel-dot {
+      width: 6px; height: 6px; border-radius: 50%;
+      background: rgba(255,255,255,.4);
+      cursor: pointer; transition: background .3s;
+      border: none; padding: 0;
+    }
+    .hero-carousel-dot.active { background: var(--gold); }
+
+    /* ── LIGHTBOX ── */
+    .lightbox {
+      display: none; position: fixed; inset: 0;
+      background: rgba(20,18,14,.93);
+      z-index: 9999;
+      align-items: center; justify-content: center;
+      backdrop-filter: blur(4px);
+    }
+    .lightbox.open { display: flex; }
+    .lightbox-img {
+      max-width: 90vw; max-height: 88vh;
+      object-fit: contain;
+      box-shadow: 0 40px 100px rgba(0,0,0,.5);
+    }
+    .lightbox-close {
+      position: absolute; top: 1.5rem; right: 1.5rem;
+      background: none; border: none;
+      color: rgba(255,255,255,.7); font-size: 2rem;
+      cursor: pointer; line-height: 1;
+      transition: color .2s;
+    }
+    .lightbox-close:hover { color: var(--gold); }
+    .lightbox-prev, .lightbox-next {
+      position: absolute; top: 50%; transform: translateY(-50%);
+      background: none; border: none;
+      color: rgba(255,255,255,.6); font-size: 2.5rem;
+      cursor: pointer; padding: 1rem;
+      transition: color .2s;
+    }
+    .lightbox-prev:hover, .lightbox-next:hover { color: var(--gold); }
+    .lightbox-prev { left: 1rem; }
+    .lightbox-next { right: 1rem; }
+    .lightbox-counter {
+      position: absolute; bottom: 1.5rem; left: 50%; transform: translateX(-50%);
+      font-family: var(--sans); font-size: .72rem;
+      letter-spacing: .1em; color: rgba(255,255,255,.5);
+    }
+    .apt-img-wrap { cursor: zoom-in; }
+
   </style>
 </head>
 <body>
@@ -1202,7 +1260,24 @@
     </div>
   </div>
   <div class="hero-right">
-    <img src="Prato-10.jpg" alt="Appartamento foresteria Genova" class="hero-img" style="width:100%;height:100%;object-fit:cover;display:block;">
+    <div class="hero-carousel" id="heroCarousel">
+      <div class="hero-carousel-slide active">
+        <img src="Prato-1.jpg" alt="Appartamento foresteria Genova" class="hero-img" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+      <div class="hero-carousel-slide">
+        <img src="Prato-2.jpg" alt="Appartamento foresteria Genova" class="hero-img" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+      <div class="hero-carousel-slide">
+        <img src="Prato-3.jpg" alt="Appartamento foresteria Genova" class="hero-img" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+      <div class="hero-carousel-slide">
+        <img src="SampierdarenaA.jpg" alt="Appartamento foresteria Sampierdarena" class="hero-img" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+      <div class="hero-carousel-slide">
+        <img src="SampierdarenaB.jpg" alt="Appartamento foresteria Sampierdarena" class="hero-img" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+      <div class="hero-carousel-dots" id="heroDots"></div>
+    </div>
     <div class="hero-badge">
       <div class="hero-badge-label">Disponibile da</div>
       <div class="hero-badge-value">€ 1.950</div>
@@ -2032,6 +2107,15 @@
   </div>
 </section>
 
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="lightboxBgClick(event)">
+  <button class="lightbox-close" onclick="closeLightbox()">&#215;</button>
+  <button class="lightbox-prev" onclick="lightboxNav(-1)">&#8249;</button>
+  <img class="lightbox-img" id="lightboxImg" src="" alt="">
+  <button class="lightbox-next" onclick="lightboxNav(+1)">&#8250;</button>
+  <div class="lightbox-counter" id="lightboxCounter"></div>
+</div>
+
 <!-- FOOTER -->
 <footer>
   <div class="footer-logo">Foresteria<span>Genova</span></div>
@@ -2262,8 +2346,81 @@
     slides[current].classList.add('active');
     counter.textContent = (current + 1) + ' / ' + slides.length;
   }
-  function galleryPrev(id) { galleryGo(id, -1); }
-  function galleryNext(id) { galleryGo(id, +1); }
+  // ── HERO CAROUSEL ──
+  (function() {
+    const slides = document.querySelectorAll('#heroCarousel .hero-carousel-slide');
+    const dotsWrap = document.getElementById('heroDots');
+    let current = 0;
+    slides.forEach((_, i) => {
+      const d = document.createElement('button');
+      d.className = 'hero-carousel-dot' + (i === 0 ? ' active' : '');
+      d.onclick = () => goSlide(i);
+      dotsWrap.appendChild(d);
+    });
+    function goSlide(n) {
+      slides[current].classList.remove('active');
+      dotsWrap.children[current].classList.remove('active');
+      current = (n + slides.length) % slides.length;
+      slides[current].classList.add('active');
+      dotsWrap.children[current].classList.add('active');
+    }
+    setInterval(() => goSlide(current + 1), 4000);
+  })();
+
+  // ── LIGHTBOX ──
+  let lbImages = [], lbIndex = 0;
+
+  function openLightbox(imgs, index) {
+    lbImages = imgs; lbIndex = index;
+    document.getElementById('lightbox').classList.add('open');
+    document.body.style.overflow = 'hidden';
+    updateLightbox();
+  }
+  function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  function lightboxBgClick(e) {
+    if (e.target === document.getElementById('lightbox')) closeLightbox();
+  }
+  function lightboxNav(dir) {
+    lbIndex = (lbIndex + dir + lbImages.length) % lbImages.length;
+    updateLightbox();
+  }
+  function updateLightbox() {
+    document.getElementById('lightboxImg').src = lbImages[lbIndex].src;
+    document.getElementById('lightboxImg').alt = lbImages[lbIndex].alt;
+    document.getElementById('lightboxCounter').textContent = (lbIndex + 1) + ' / ' + lbImages.length;
+    // show/hide nav arrows
+    const showNav = lbImages.length > 1;
+    document.querySelector('.lightbox-prev').style.display = showNav ? '' : 'none';
+    document.querySelector('.lightbox-next').style.display = showNav ? '' : 'none';
+  }
+  document.addEventListener('keydown', e => {
+    if (!document.getElementById('lightbox').classList.contains('open')) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') lightboxNav(-1);
+    if (e.key === 'ArrowRight') lightboxNav(+1);
+  });
+
+  // Attach lightbox to apartment card images
+  document.querySelectorAll('.apt-img-wrap').forEach(wrap => {
+    const imgs = [...wrap.querySelectorAll('img')];
+    if (!imgs.length) return;
+    wrap.addEventListener('click', e => {
+      if (e.target.closest('.apt-overlay-occupato')) return;
+      openLightbox(imgs, 0);
+    });
+  });
+
+  // Attach lightbox to gallery slides in Bolzaneto card
+  document.querySelectorAll('.gallery-slide img').forEach((img, i, all) => {
+    img.style.cursor = 'zoom-in';
+    img.addEventListener('click', e => {
+      e.stopPropagation();
+      openLightbox([...all], i);
+    });
+  });
   // ── STATO APPARTAMENTI ──
   // Dati inline (aggiornati automaticamente da status.json se disponibile)
   const statoDefault = {
