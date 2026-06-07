@@ -1,7 +1,7 @@
 {
   "appartamenti": {
     "bolzaneto": {
-      "occupato": true,
+      "occupato": false,
       "fino_al": "2027-03-31"
     },
     "sampierdarena_a": {
