@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- v=2.3 | 2026-05-13 -->
+<!-- v=2.6 | 2026-06-07 -->
 <html lang="it">
 <head>
   <meta charset="UTF-8" />
@@ -1136,6 +1136,7 @@
       gap: .6rem;
       z-index: 4;
       backdrop-filter: blur(2px);
+      cursor: zoom-in;
     }
     .apt-overlay-occupato-icon {
       width: 36px; height: 36px;
@@ -1308,6 +1309,383 @@
       <div class="hero-badge-label">Disponibile da</div>
       <div class="hero-badge-value">€ 1.950</div>
       <div class="hero-badge-sub">al mese, tutto incluso</div>
+    </div>
+  </div>
+</section>
+
+<!-- APPARTAMENTI -->
+<section id="appartamenti">
+  <div class="apt-intro">
+    <div>
+      <div class="section-eyebrow reveal">Il portfolio</div>
+      <h2 class="section-title reveal">Gli <em>appartamenti</em><br>disponibili</h2>
+      <div class="divider reveal"></div>
+    </div>
+    <p class="section-lead reveal">
+      Cinque appartamenti completamente ristrutturati e arredati a Genova, in posizione strategica rispetto alle principali infrastrutture: caselli autostradali, stazione ferroviaria e aree produttive del ponente e della Valpolcevera.
+    </p>
+  </div>
+  <div class="apt-grid">
+    <!-- Card 1 -->
+    <div class="apt-card reveal">
+      <div class="apt-img-wrap" id="card-bolzaneto" style="position:relative; aspect-ratio:4/3; overflow:hidden; background:#1c1a16;">
+        <div class="gallery-slider" id="gallery-prato">
+          <div class="gallery-slide active"><img src="Prato-10.jpg" alt="Cucina e soggiorno" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+          <div class="gallery-slide"><img src="Prato-11.jpg" alt="Soggiorno" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+          <div class="gallery-slide"><img src="Prato-1.jpg" alt="Soggiorno con TV" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+          <div class="gallery-slide"><img src="Prato-2.jpg" alt="Camera doppia" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+          <div class="gallery-slide"><img src="Prato-5.jpg" alt="Camera doppia" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+          <div class="gallery-slide"><img src="Prato-12.jpg" alt="Camera doppia con vista" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+          <div class="gallery-slide"><img src="Prato-13.jpg" alt="Camera doppia" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+          <div class="gallery-slide"><img src="Prato-3.jpg" alt="Camera matrimoniale" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+          <div class="gallery-slide"><img src="Prato-4.jpg" alt="Corridoio" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+          <div class="gallery-slide"><img src="Prato-6.jpg" alt="Bagno 1" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+          <div class="gallery-slide"><img src="Prato-7.jpg" alt="Bagno 2" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+          <div class="gallery-slide"><img src="Prato-14_add.jpg" alt="Camera matrimoniale" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+          <div class="gallery-slide"><img src="Prato-15.jpg" alt="Esterno palazzina" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+        </div>
+        <button class="gallery-btn gallery-prev" onclick="galleryPrev('gallery-prato')">&#8249;</button>
+        <button class="gallery-btn gallery-next" onclick="galleryNext('gallery-prato')">&#8250;</button>
+        <div class="gallery-counter" id="gallery-prato-counter">1 / 13</div>
+        <span class="apt-zone">Bolzaneto / Pontedecimo</span>
+      </div>
+      <div class="apt-body">
+        <h3 class="apt-name">Passo Pratogagliardo 2</h3>
+        <p class="apt-desc">Appartamento di 112 mq appena ristrutturato e completamente arredato, al secondo piano di piccola palazzina. 6 vani: ingresso, cucina abitabile con salotto e divano letto, 3 camere doppie con letti singoli, 1 camera matrimoniale, 2 bagni con doccia. Ideale per team fino a 8 persone.</p>
+        <div class="apt-features" style="flex-wrap:wrap; gap:1rem;">
+          <span class="apt-feat">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+            112 m² · 6 vani
+          </span>
+          <span class="apt-feat">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            Fino a 8 persone
+          </span>
+          <span class="apt-feat" style="color:var(--gold-lt);">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            Consigliato: 7 persone
+          </span>
+          <span class="apt-feat">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            Stazione · 3 min
+          </span>
+          <span class="apt-feat">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/><circle cx="12" cy="16" r="1"/></svg>
+            Accesso con chiave o codice
+          </span>
+        </div>
+        <div class="apt-features" style="border-top:none; padding-top:0; margin-top:-.5rem; flex-wrap:wrap; gap:1rem;">
+          <span class="apt-feat">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><circle cx="12" cy="20" r="1"/></svg>
+            WiFi incluso
+          </span>
+          <span class="apt-feat">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+            Lavatrice · Lavastoviglie
+          </span>
+          <span class="apt-feat">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/></svg>
+            Clima + riscaldamento autonomo
+          </span>
+        </div>
+        <div class="apt-price">
+          <span class="apt-price-from">da</span>
+          <span class="apt-price-num">€ 2.150</span>
+          <span class="apt-price-mo">/mese</span>
+        </div>
+        <p class="apt-note">✓ Deducibile al 100% · Contratto registrato</p>
+        <p class="apt-utilities-note">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          Utenze, luce, gas e amministrazione incluse fino al massimale di proposta. Conguaglio annuale o a fine contratto. Disponibile servizio biancheria e pulizie settimanali.
+        </p>
+      </div>
+    </div>
+    <!-- Card 2 -->
+    <div class="apt-card reveal">
+      <div class="apt-img-wrap" id="card-sampierdarena-a">
+        <div class="gallery-slider" id="gallery-samp-a">
+          <div class="gallery-slide active"><img src="SampierdarenaA-1.jpg" alt="Camera doppia" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+          <div class="gallery-slide"><img src="SampierdarenaA-2.jpg" alt="Camera doppia" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+          <div class="gallery-slide"><img src="SampierdarenaA-3.jpg" alt="Camera doppia" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+          <div class="gallery-slide"><img src="SampierdarenaA-4.jpg" alt="Camera singola" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+          <div class="gallery-slide"><img src="SampierdarenaA-5.jpg" alt="Camera singola" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+          <div class="gallery-slide"><img src="SampierdarenaA-6.jpg" alt="Camera singola" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+          <div class="gallery-slide"><img src="SampierdarenaA-7.jpg" alt="Camera singola" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+          <div class="gallery-slide"><img src="SampierdarenaA-8.jpg" alt="Camera singola" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+          <div class="gallery-slide"><img src="SampierdarenaA-9.jpg" alt="Dispensa cucina" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+          <div class="gallery-slide"><img src="SampierdarenaA-10.jpg" alt="Disimpegno" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+          <div class="gallery-slide"><img src="SampierdarenaA-11.jpg" alt="Cucina abitabile" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+          <div class="gallery-slide"><img src="SampierdarenaA-12.jpg" alt="Cucina" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+          <div class="gallery-slide"><img src="SampierdarenaA-13.jpg" alt="Cucina" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+          <div class="gallery-slide"><img src="SampierdarenaA-14.jpg" alt="Cucina" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+          <div class="gallery-slide"><img src="SampierdarenaA-15.jpg" alt="Disimpegno" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+          <div class="gallery-slide"><img src="SampierdarenaA-16.jpg" alt="Corridoio" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+          <div class="gallery-slide"><img src="SampierdarenaA-17.jpg" alt="Forno microonde" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+          <div class="gallery-slide"><img src="SampierdarenaA-18.jpg" alt="Zona pranzo" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+          <div class="gallery-slide"><img src="SampierdarenaA-19.jpg" alt="Bagno con doccia" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+          <div class="gallery-slide"><img src="SampierdarenaA-20.jpg" alt="Ingresso" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+        </div>
+        <button class="gallery-btn gallery-prev" onclick="galleryPrev('gallery-samp-a')">&#8249;</button>
+        <button class="gallery-btn gallery-next" onclick="galleryNext('gallery-samp-a')">&#8250;</button>
+        <span class="gallery-counter" id="gallery-samp-a-counter">1 / 20</span>
+        <span class="apt-zone">Sampierdarena</span>
+      </div>
+      <div class="apt-body">
+        <h3 class="apt-name">Via Sampierdarena 17 — A</h3>
+        <p class="apt-desc">Appartamento di 102 mq appena ristrutturato e completamente arredato, al secondo piano di un bel palazzo storico. 5 vani: disimpegno, cucina abitabile, 3 camere doppie con letti singoli, bagno con doccia. Ideale per team fino a 6 persone.</p>
+        <div class="apt-features">
+          <span class="apt-feat">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+            102 m² · 5 vani
+          </span>
+          <span class="apt-feat">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            Fino a 6 persone
+          </span>
+          <span class="apt-feat" style="color:var(--gold-lt);">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            Consigliato: 4 persone
+          </span>
+          <span class="apt-feat">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            Palazzo storico
+          </span>
+          <span class="apt-feat">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="2" width="18" height="20" rx="2"/><line x1="9" y1="2" x2="9" y2="22"/><polyline points="5 8 9 4 13 8"/><polyline points="5 16 9 20 13 16"/></svg>
+            Ascensore
+          </span>
+        </div>
+        <div class="apt-features" style="border-top:none; padding-top:0; margin-top:-.5rem; flex-wrap:wrap; gap:1rem;">
+          <span class="apt-feat">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            Smart TV ogni stanza
+          </span>
+          <span class="apt-feat">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><circle cx="12" cy="20" r="1"/></svg>
+            WiFi incluso
+          </span>
+          <span class="apt-feat">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+            Lavatrice · Lavastoviglie
+          </span>
+          <span class="apt-feat">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/></svg>
+            Clima + riscaldamento autonomo
+          </span>
+        </div>
+        <div class="apt-price">
+          <span class="apt-price-from">da</span>
+          <span class="apt-price-num">€ 1.950</span>
+          <span class="apt-price-mo">/mese</span>
+        </div>
+        <p class="apt-note">✓ Deducibile al 100% · Contratto registrato</p>
+        <p class="apt-utilities-note">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          Utenze, luce, gas e amministrazione incluse fino al massimale di proposta. Conguaglio annuale o a fine contratto. Disponibile servizio biancheria e pulizie settimanali.
+        </p>
+      </div>
+    </div>
+    <!-- Card 3 -->
+    <div class="apt-card reveal">
+      <div class="apt-img-wrap" id="card-sampierdarena-b">
+        <img src="SampierdarenaB.jpg" alt="Appartamento foresteria Sampierdarena B - camera doppia" style="width:100%; height:100%; object-fit:cover; display:block;">
+        <span class="apt-zone">Sampierdarena</span>
+      </div>
+      <div class="apt-body">
+        <h3 class="apt-name">Via Sampierdarena 17 — B</h3>
+        <p class="apt-desc">Appartamento di 109 mq appena ristrutturato e completamente arredato, al secondo piano di un bel palazzo storico. 6 vani: disimpegno, cucina abitabile, 3 camere doppie con letti singoli, 1 camera singola, bagno con doccia. Una delle camere è dotata di terrazzo vivibile. Ideale per team fino a 7 persone.</p>
+        <div class="apt-features">
+          <span class="apt-feat">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+            109 m² · 6 vani
+          </span>
+          <span class="apt-feat">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            Fino a 7 persone
+          </span>
+          <span class="apt-feat" style="color:var(--gold-lt);">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            Consigliato: 5 persone
+          </span>
+          <span class="apt-feat">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            Palazzo storico
+          </span>
+          <span class="apt-feat">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 17h18M3 17V7l6-4h6l6 4v10"/></svg>
+            Terrazzo vivibile
+          </span>
+          <span class="apt-feat">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="2" width="18" height="20" rx="2"/><line x1="9" y1="2" x2="9" y2="22"/><polyline points="5 8 9 4 13 8"/><polyline points="5 16 9 20 13 16"/></svg>
+            Ascensore
+          </span>
+        </div>
+        <div class="apt-features" style="border-top:none; padding-top:0; margin-top:-.5rem; flex-wrap:wrap; gap:1rem;">
+          <span class="apt-feat">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            Smart TV ogni stanza
+          </span>
+          <span class="apt-feat">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><circle cx="12" cy="20" r="1"/></svg>
+            WiFi incluso
+          </span>
+          <span class="apt-feat">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+            Lavatrice · Lavastoviglie
+          </span>
+          <span class="apt-feat">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/></svg>
+            Clima + riscaldamento autonomo
+          </span>
+        </div>
+        <div class="apt-price">
+          <span class="apt-price-from">da</span>
+          <span class="apt-price-num">€ 2.150</span>
+          <span class="apt-price-mo">/mese</span>
+        </div>
+        <p class="apt-note">✓ Deducibile al 100% · Contratto registrato</p>
+        <p class="apt-utilities-note">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          Utenze, luce, gas e amministrazione incluse fino al massimale di proposta. Conguaglio annuale o a fine contratto. Disponibile servizio biancheria e pulizie settimanali.
+        </p>
+      </div>
+    </div>
+    <!-- Card 4 -->
+    <div class="apt-card reveal">
+      <div class="apt-img-wrap" id="card-sestri">
+        <div class="apt-img-placeholder">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+            <rect x="3" y="3" width="18" height="18" rx="2"/>
+            <circle cx="8.5" cy="8.5" r="1.5"/>
+            <polyline points="21 15 16 10 5 21"/>
+          </svg>
+          <span>Foto in arrivo</span>
+        </div>
+        <span class="apt-zone">Sestri Ponente</span>
+      </div>
+      <div class="apt-body">
+        <h3 class="apt-name">Via San Giovanni Battista 53</h3>
+        <p class="apt-desc">Appartamento di 70 mq completamente arredato e attrezzato, al quarto piano con ascensore. 3 vani: disimpegno, cucina abitabile, 2 camere doppie con letti singoli, bagno con doccia. Posto auto incluso. Ideale per team fino a 4 persone.</p>
+        <div class="apt-features" style="flex-wrap:wrap; gap:1rem;">
+          <span class="apt-feat">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+            70 m² · 3 vani
+          </span>
+          <span class="apt-feat">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            Fino a 4 persone
+          </span>
+          <span class="apt-feat" style="color:var(--gold-lt);">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            Consigliato: 3 persone
+          </span>
+          <span class="apt-feat">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="2" width="18" height="20" rx="2"/><line x1="9" y1="2" x2="9" y2="22"/><polyline points="5 8 9 4 13 8"/><polyline points="5 16 9 20 13 16"/></svg>
+            Ascensore
+          </span>
+          <span class="apt-feat">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            Posto auto incluso
+          </span>
+        </div>
+        <div class="apt-features" style="border-top:none; padding-top:0; margin-top:-.5rem; flex-wrap:wrap; gap:1rem;">
+          <span class="apt-feat">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            Smart TV ogni stanza
+          </span>
+          <span class="apt-feat">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><circle cx="12" cy="20" r="1"/></svg>
+            WiFi incluso
+          </span>
+          <span class="apt-feat">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+            Lavatrice
+          </span>
+          <span class="apt-feat">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/></svg>
+            Riscaldamento autonomo
+          </span>
+        </div>
+        <div class="apt-price">
+          <span class="apt-price-from">da</span>
+          <span class="apt-price-num">€ 1.550</span>
+          <span class="apt-price-mo">/mese</span>
+        </div>
+        <p class="apt-note">✓ Deducibile al 100% · Contratto registrato</p>
+        <p class="apt-utilities-note">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          Utenze, luce, gas e amministrazione incluse fino al massimale di proposta. Conguaglio annuale o a fine contratto. Disponibile servizio biancheria e pulizie settimanali.
+        </p>
+      </div>
+    </div>
+    <!-- Card 5 -->
+    <div class="apt-card reveal">
+      <div class="apt-img-wrap" id="card-sampierdarena-c">
+        <div class="apt-img-placeholder">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+            <rect x="3" y="3" width="18" height="18" rx="2"/>
+            <circle cx="8.5" cy="8.5" r="1.5"/>
+            <polyline points="21 15 16 10 5 21"/>
+          </svg>
+          <span>Foto in arrivo</span>
+        </div>
+        <span class="apt-zone">Sampierdarena</span>
+      </div>
+      <div class="apt-body">
+        <h3 class="apt-name">Corso Martinetti 125 — C</h3>
+        <p class="apt-desc">Appartamento di 75 mq completamente arredato, al primo piano. 3 vani: disimpegno, cucina abitabile, 1 camera doppia con letti singoli, 1 camera singola, bagno con doccia. Ampio terrazzo al piano di 24 mq. Ideale per team fino a 3 persone.</p>
+        <div class="apt-features" style="flex-wrap:wrap; gap:1rem;">
+          <span class="apt-feat">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+            75 m² · 3 vani
+          </span>
+          <span class="apt-feat">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            Fino a 3 persone
+          </span>
+          <span class="apt-feat" style="color:var(--gold-lt);">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            Consigliato: 2 persone
+          </span>
+          <span class="apt-feat">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 17h18M3 17V7l6-4h6l6 4v10"/></svg>
+            Terrazzo 24 m²
+          </span>
+        </div>
+        <div class="apt-features" style="border-top:none; padding-top:0; margin-top:-.5rem; flex-wrap:wrap; gap:1rem;">
+          <span class="apt-feat">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            Smart TV ogni stanza
+          </span>
+          <span class="apt-feat">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><circle cx="12" cy="20" r="1"/></svg>
+            WiFi incluso
+          </span>
+          <span class="apt-feat">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+            Lavatrice
+          </span>
+          <span class="apt-feat">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/></svg>
+            Riscaldamento autonomo
+          </span>
+        </div>
+        <div class="apt-price">
+          <span class="apt-price-from">da</span>
+          <span class="apt-price-num">€ 1.450</span>
+          <span class="apt-price-mo">/mese</span>
+        </div>
+        <p class="apt-note">✓ Deducibile al 100% · Contratto registrato</p>
+        <p class="apt-utilities-note">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          Utenze, luce, gas e amministrazione incluse fino al massimale di proposta. Conguaglio annuale o a fine contratto. Disponibile servizio biancheria e pulizie settimanali.
+        </p>
+      </div>
+    </div>
+    <!-- Coming soon -->
+    <div class="apt-coming reveal">
+      Nuove unità in arrivo.<br>
+      <span style="font-size:.8rem; font-family: var(--sans); color: var(--light); font-style:normal;">Contattaci per essere informato.</span>
     </div>
   </div>
 </section>
@@ -1529,339 +1907,6 @@
     </div><!-- /sim-output -->
 
   </div><!-- /sim-wrap -->
-</section>
-
-<!-- APPARTAMENTI -->
-<section id="appartamenti">
-  <div class="apt-intro">
-    <div>
-      <div class="section-eyebrow reveal">Il portfolio</div>
-      <h2 class="section-title reveal">Gli <em>appartamenti</em><br>disponibili</h2>
-      <div class="divider reveal"></div>
-    </div>
-    <p class="section-lead reveal">
-      Cinque appartamenti completamente ristrutturati e arredati a Genova, in posizione strategica rispetto alle principali infrastrutture: caselli autostradali, stazione ferroviaria e aree produttive del ponente e della Valpolcevera.
-    </p>
-  </div>
-  <div class="apt-grid">
-    <!-- Card 1 -->
-    <div class="apt-card reveal">
-      <div class="apt-img-wrap" id="card-bolzaneto" style="position:relative; aspect-ratio:4/3; overflow:hidden; background:#1c1a16;">
-        <div class="gallery-slider" id="gallery-prato">
-          <div class="gallery-slide active"><img src="Prato-10.jpg" alt="Cucina e soggiorno" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
-          <div class="gallery-slide"><img src="Prato-11.jpg" alt="Soggiorno" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
-          <div class="gallery-slide"><img src="Prato-1.jpg" alt="Soggiorno con TV" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
-          <div class="gallery-slide"><img src="Prato-2.jpg" alt="Camera doppia" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
-          <div class="gallery-slide"><img src="Prato-5.jpg" alt="Camera doppia" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
-          <div class="gallery-slide"><img src="Prato-12.jpg" alt="Camera doppia con vista" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
-          <div class="gallery-slide"><img src="Prato-13.jpg" alt="Camera doppia" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
-          <div class="gallery-slide"><img src="Prato-3.jpg" alt="Camera matrimoniale" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
-          <div class="gallery-slide"><img src="Prato-4.jpg" alt="Corridoio" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
-          <div class="gallery-slide"><img src="Prato-6.jpg" alt="Bagno 1" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
-          <div class="gallery-slide"><img src="Prato-7.jpg" alt="Bagno 2" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
-          <div class="gallery-slide"><img src="Prato-14_add.jpg" alt="Camera matrimoniale" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
-          <div class="gallery-slide"><img src="Prato-15.jpg" alt="Esterno palazzina" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
-        </div>
-        <button class="gallery-btn gallery-prev" onclick="galleryPrev('gallery-prato')">&#8249;</button>
-        <button class="gallery-btn gallery-next" onclick="galleryNext('gallery-prato')">&#8250;</button>
-        <div class="gallery-counter" id="gallery-prato-counter">1 / 13</div>
-        <span class="apt-zone">Bolzaneto / Pontedecimo</span>
-      </div>
-      <div class="apt-body">
-        <h3 class="apt-name">Passo Pratogagliardo 2</h3>
-        <p class="apt-desc">Appartamento di 112 mq appena ristrutturato e completamente arredato, al secondo piano di piccola palazzina. 6 vani: ingresso, cucina abitabile con salotto e divano letto, 3 camere doppie con letti singoli, 1 camera matrimoniale, 2 bagni con doccia. Ideale per team fino a 8 persone.</p>
-        <div class="apt-features" style="flex-wrap:wrap; gap:1rem;">
-          <span class="apt-feat">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
-            112 m² · 6 vani
-          </span>
-          <span class="apt-feat">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-            Fino a 8 persone
-          </span>
-          <span class="apt-feat">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            Stazione · 3 min
-          </span>
-          <span class="apt-feat">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/><circle cx="12" cy="16" r="1"/></svg>
-            Accesso con chiave o codice
-          </span>
-        </div>
-        <div class="apt-features" style="border-top:none; padding-top:0; margin-top:-.5rem; flex-wrap:wrap; gap:1rem;">
-          <span class="apt-feat">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><circle cx="12" cy="20" r="1"/></svg>
-            WiFi incluso
-          </span>
-          <span class="apt-feat">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
-            Lavatrice · Lavastoviglie
-          </span>
-          <span class="apt-feat">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/></svg>
-            Clima + riscaldamento autonomo
-          </span>
-        </div>
-        <div class="apt-price">
-          <span class="apt-price-from">da</span>
-          <span class="apt-price-num">€ 2.150</span>
-          <span class="apt-price-mo">/mese</span>
-        </div>
-        <p class="apt-note">✓ Deducibile al 100% · Contratto registrato</p>
-        <p class="apt-utilities-note">
-          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-          Utenze, luce, gas e amministrazione incluse fino al massimale di proposta. Conguaglio annuale o a fine contratto. Disponibile servizio biancheria e pulizie settimanali.
-        </p>
-      </div>
-    </div>
-    <!-- Card 2 -->
-    <div class="apt-card reveal">
-      <div class="apt-img-wrap" id="card-sampierdarena-a">
-        <img src="SampierdarenaA.jpg" alt="Appartamento foresteria Sampierdarena A - camera doppia" style="width:100%; height:100%; object-fit:cover; display:block;">
-        <span class="apt-zone">Sampierdarena</span>
-      </div>
-      <div class="apt-body">
-        <h3 class="apt-name">Via Sampierdarena 17 — A</h3>
-        <p class="apt-desc">Appartamento di 102 mq appena ristrutturato e completamente arredato, al secondo piano di un bel palazzo storico. 5 vani: disimpegno, cucina abitabile, 3 camere doppie con letti singoli, bagno con doccia. Ideale per team fino a 6 persone.</p>
-        <div class="apt-features">
-          <span class="apt-feat">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
-            102 m² · 5 vani
-          </span>
-          <span class="apt-feat">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-            Fino a 6 persone
-          </span>
-          <span class="apt-feat">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            Palazzo storico
-          </span>
-          <span class="apt-feat">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="2" width="18" height="20" rx="2"/><line x1="9" y1="2" x2="9" y2="22"/><polyline points="5 8 9 4 13 8"/><polyline points="5 16 9 20 13 16"/></svg>
-            Ascensore
-          </span>
-        </div>
-        <div class="apt-features" style="border-top:none; padding-top:0; margin-top:-.5rem; flex-wrap:wrap; gap:1rem;">
-          <span class="apt-feat">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-            Smart TV ogni stanza
-          </span>
-          <span class="apt-feat">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><circle cx="12" cy="20" r="1"/></svg>
-            WiFi incluso
-          </span>
-          <span class="apt-feat">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
-            Lavatrice · Lavastoviglie
-          </span>
-          <span class="apt-feat">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/></svg>
-            Clima + riscaldamento autonomo
-          </span>
-        </div>
-        <div class="apt-price">
-          <span class="apt-price-from">da</span>
-          <span class="apt-price-num">€ 1.950</span>
-          <span class="apt-price-mo">/mese</span>
-        </div>
-        <p class="apt-note">✓ Deducibile al 100% · Contratto registrato</p>
-        <p class="apt-utilities-note">
-          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-          Utenze, luce, gas e amministrazione incluse fino al massimale di proposta. Conguaglio annuale o a fine contratto. Disponibile servizio biancheria e pulizie settimanali.
-        </p>
-      </div>
-    </div>
-    <!-- Card 3 -->
-    <div class="apt-card reveal">
-      <div class="apt-img-wrap" id="card-sampierdarena-b">
-        <img src="SampierdarenaB.jpg" alt="Appartamento foresteria Sampierdarena B - camera doppia" style="width:100%; height:100%; object-fit:cover; display:block;">
-        <span class="apt-zone">Sampierdarena</span>
-      </div>
-      <div class="apt-body">
-        <h3 class="apt-name">Via Sampierdarena 17 — B</h3>
-        <p class="apt-desc">Appartamento di 109 mq appena ristrutturato e completamente arredato, al secondo piano di un bel palazzo storico. 6 vani: disimpegno, cucina abitabile, 3 camere doppie con letti singoli, 1 camera singola, bagno con doccia. Una delle camere è dotata di terrazzo vivibile. Ideale per team fino a 7 persone.</p>
-        <div class="apt-features">
-          <span class="apt-feat">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
-            109 m² · 6 vani
-          </span>
-          <span class="apt-feat">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-            Fino a 7 persone
-          </span>
-          <span class="apt-feat">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            Palazzo storico
-          </span>
-          <span class="apt-feat">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 17h18M3 17V7l6-4h6l6 4v10"/></svg>
-            Terrazzo vivibile
-          </span>
-          <span class="apt-feat">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="2" width="18" height="20" rx="2"/><line x1="9" y1="2" x2="9" y2="22"/><polyline points="5 8 9 4 13 8"/><polyline points="5 16 9 20 13 16"/></svg>
-            Ascensore
-          </span>
-        </div>
-        <div class="apt-features" style="border-top:none; padding-top:0; margin-top:-.5rem; flex-wrap:wrap; gap:1rem;">
-          <span class="apt-feat">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-            Smart TV ogni stanza
-          </span>
-          <span class="apt-feat">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><circle cx="12" cy="20" r="1"/></svg>
-            WiFi incluso
-          </span>
-          <span class="apt-feat">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
-            Lavatrice · Lavastoviglie
-          </span>
-          <span class="apt-feat">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/></svg>
-            Clima + riscaldamento autonomo
-          </span>
-        </div>
-        <div class="apt-price">
-          <span class="apt-price-from">da</span>
-          <span class="apt-price-num">€ 2.150</span>
-          <span class="apt-price-mo">/mese</span>
-        </div>
-        <p class="apt-note">✓ Deducibile al 100% · Contratto registrato</p>
-        <p class="apt-utilities-note">
-          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-          Utenze, luce, gas e amministrazione incluse fino al massimale di proposta. Conguaglio annuale o a fine contratto. Disponibile servizio biancheria e pulizie settimanali.
-        </p>
-      </div>
-    </div>
-    <!-- Card 4 -->
-    <div class="apt-card reveal">
-      <div class="apt-img-wrap" id="card-sestri">
-        <div class="apt-img-placeholder">
-          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
-            <rect x="3" y="3" width="18" height="18" rx="2"/>
-            <circle cx="8.5" cy="8.5" r="1.5"/>
-            <polyline points="21 15 16 10 5 21"/>
-          </svg>
-          <span>Foto in arrivo</span>
-        </div>
-        <span class="apt-zone">Sestri Ponente</span>
-      </div>
-      <div class="apt-body">
-        <h3 class="apt-name">Via San Giovanni Battista 53</h3>
-        <p class="apt-desc">Appartamento di 70 mq completamente arredato e attrezzato, al quarto piano con ascensore. 3 vani: disimpegno, cucina abitabile, 2 camere doppie con letti singoli, bagno con doccia. Posto auto incluso. Ideale per team fino a 4 persone.</p>
-        <div class="apt-features" style="flex-wrap:wrap; gap:1rem;">
-          <span class="apt-feat">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
-            70 m² · 3 vani
-          </span>
-          <span class="apt-feat">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-            Fino a 4 persone
-          </span>
-          <span class="apt-feat">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="2" width="18" height="20" rx="2"/><line x1="9" y1="2" x2="9" y2="22"/><polyline points="5 8 9 4 13 8"/><polyline points="5 16 9 20 13 16"/></svg>
-            Ascensore
-          </span>
-          <span class="apt-feat">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
-            Posto auto incluso
-          </span>
-        </div>
-        <div class="apt-features" style="border-top:none; padding-top:0; margin-top:-.5rem; flex-wrap:wrap; gap:1rem;">
-          <span class="apt-feat">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-            Smart TV ogni stanza
-          </span>
-          <span class="apt-feat">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><circle cx="12" cy="20" r="1"/></svg>
-            WiFi incluso
-          </span>
-          <span class="apt-feat">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
-            Lavatrice
-          </span>
-          <span class="apt-feat">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/></svg>
-            Riscaldamento autonomo
-          </span>
-        </div>
-        <div class="apt-price">
-          <span class="apt-price-from">da</span>
-          <span class="apt-price-num">€ 1.550</span>
-          <span class="apt-price-mo">/mese</span>
-        </div>
-        <p class="apt-note">✓ Deducibile al 100% · Contratto registrato</p>
-        <p class="apt-utilities-note">
-          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-          Utenze, luce, gas e amministrazione incluse fino al massimale di proposta. Conguaglio annuale o a fine contratto. Disponibile servizio biancheria e pulizie settimanali.
-        </p>
-      </div>
-    </div>
-    <!-- Card 5 -->
-    <div class="apt-card reveal">
-      <div class="apt-img-wrap" id="card-sampierdarena-c">
-        <div class="apt-img-placeholder">
-          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
-            <rect x="3" y="3" width="18" height="18" rx="2"/>
-            <circle cx="8.5" cy="8.5" r="1.5"/>
-            <polyline points="21 15 16 10 5 21"/>
-          </svg>
-          <span>Foto in arrivo</span>
-        </div>
-        <span class="apt-zone">Sampierdarena</span>
-      </div>
-      <div class="apt-body">
-        <h3 class="apt-name">Corso Martinetti 125 — C</h3>
-        <p class="apt-desc">Appartamento di 75 mq completamente arredato, al primo piano. 3 vani: disimpegno, cucina abitabile, 1 camera doppia con letti singoli, 1 camera singola, bagno con doccia. Ampio terrazzo al piano di 24 mq. Ideale per team fino a 3 persone.</p>
-        <div class="apt-features" style="flex-wrap:wrap; gap:1rem;">
-          <span class="apt-feat">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
-            75 m² · 3 vani
-          </span>
-          <span class="apt-feat">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-            Fino a 3 persone
-          </span>
-          <span class="apt-feat">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 17h18M3 17V7l6-4h6l6 4v10"/></svg>
-            Terrazzo 24 m²
-          </span>
-        </div>
-        <div class="apt-features" style="border-top:none; padding-top:0; margin-top:-.5rem; flex-wrap:wrap; gap:1rem;">
-          <span class="apt-feat">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-            Smart TV ogni stanza
-          </span>
-          <span class="apt-feat">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><circle cx="12" cy="20" r="1"/></svg>
-            WiFi incluso
-          </span>
-          <span class="apt-feat">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
-            Lavatrice
-          </span>
-          <span class="apt-feat">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/></svg>
-            Riscaldamento autonomo
-          </span>
-        </div>
-        <div class="apt-price">
-          <span class="apt-price-from">da</span>
-          <span class="apt-price-num">€ 1.450</span>
-          <span class="apt-price-mo">/mese</span>
-        </div>
-        <p class="apt-note">✓ Deducibile al 100% · Contratto registrato</p>
-        <p class="apt-utilities-note">
-          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-          Utenze, luce, gas e amministrazione incluse fino al massimale di proposta. Conguaglio annuale o a fine contratto. Disponibile servizio biancheria e pulizie settimanali.
-        </p>
-      </div>
-    </div>
-    <!-- Coming soon -->
-    <div class="apt-coming reveal">
-      Nuove unità in arrivo.<br>
-      <span style="font-size:.8rem; font-family: var(--sans); color: var(--light); font-style:normal;">Contattaci per essere informato.</span>
-    </div>
-  </div>
 </section>
 
 <!-- COME FUNZIONA -->
@@ -2434,7 +2479,7 @@
     const imgs = [...wrap.querySelectorAll('img')];
     if (!imgs.length) return;
     wrap.addEventListener('click', e => {
-      if (e.target.closest('.apt-overlay-occupato')) return;
+      // click anywhere on card image (including occupied overlay) opens lightbox
       openLightbox(imgs, 0);
     });
   });
