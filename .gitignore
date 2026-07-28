@@ -1,0 +1,6 @@
+# Backup e file di lavoro — mai pubblicare su GitHub Pages
+*.zip
+index_v*.html
+
+# Contesto interno (contiene tabella prezzi e key Web3Forms)
+CLAUDE*.md
