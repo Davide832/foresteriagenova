@@ -1,0 +1,543 @@
+/* ═══════════════════════════════════════════════════════════════
+   ForesteriaGenova.it — foglio di stile condiviso pagine appartamento
+   Stesso design language della home (variabili, font, componenti).
+   v=3.0 | 2026-07-28
+   ═══════════════════════════════════════════════════════════════ */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --cream:   #F5F2EC;
+  --warm:    #EDE8DF;
+  --gold:    #B8975A;
+  --gold-lt: #D4B483;
+  --dark:    #1C1A16;
+  --mid:     #4A4540;
+  --light:   #8A847C;
+  --white:   #FDFCFA;
+  --serif:   'Cormorant Garamond', Georgia, serif;
+  --sans:    'DM Sans', sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--sans);
+  background: var(--cream);
+  color: var(--dark);
+  font-size: 16px;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ── NAV (identica alla home) ── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1.4rem 4rem;
+  background: rgba(245,242,236,0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(184,151,90,0.15);
+  transition: padding .3s;
+}
+nav.scrolled { padding: 1rem 4rem; }
+.nav-logo {
+  font-family: var(--serif);
+  font-size: 1.35rem;
+  font-weight: 400;
+  letter-spacing: .08em;
+  color: var(--dark);
+  text-decoration: none;
+}
+.nav-logo span { color: var(--gold); }
+.nav-links { display: flex; gap: 2.5rem; list-style: none; }
+.nav-links a {
+  font-family: var(--sans);
+  font-size: .78rem;
+  font-weight: 500;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--mid);
+  text-decoration: none;
+  transition: color .2s;
+}
+.nav-links a:hover { color: var(--gold); }
+.nav-cta {
+  font-family: var(--sans);
+  font-size: .78rem;
+  font-weight: 500;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--white);
+  background: var(--dark);
+  padding: .65rem 1.6rem;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background .2s;
+}
+.nav-cta:hover { background: var(--gold); }
+.lang-switcher { display: flex; gap: .3rem; align-items: center; margin-left: .5rem; }
+.lang-btn {
+  font-family: var(--sans); font-size: .65rem; font-weight: 600;
+  letter-spacing: .08em; color: var(--light);
+  padding: .25rem .45rem;
+  border: 1px solid transparent;
+  text-decoration: none; transition: all .2s;
+}
+.lang-btn:hover, .lang-btn.active { color: var(--gold); border-color: rgba(184,151,90,.4); }
+.hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+.hamburger span { width: 24px; height: 1.5px; background: var(--dark); display: block; transition: .3s; }
+
+/* Menu mobile a tendina */
+.nav-mobile {
+  display: none;
+  position: fixed; top: 0; left: 0; right: 0; z-index: 99;
+  background: rgba(245,242,236,0.98);
+  backdrop-filter: blur(12px);
+  padding: 6rem 2rem 2rem;
+  border-bottom: 1px solid rgba(184,151,90,.2);
+  flex-direction: column; gap: 1.4rem;
+}
+.nav-mobile.open { display: flex; }
+.nav-mobile a {
+  font-size: .82rem; font-weight: 500; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--mid); text-decoration: none;
+}
+.nav-mobile a:hover { color: var(--gold); }
+
+/* ── COMMONS ── */
+section { padding: 6rem 4rem; }
+.section-eyebrow {
+  font-size: .72rem;
+  font-weight: 500;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1rem;
+}
+.section-title {
+  font-family: var(--serif);
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 300;
+  line-height: 1.18;
+  color: var(--dark);
+  margin-bottom: 1.5rem;
+}
+.section-title em { font-style: italic; color: var(--gold); }
+.divider { width: 48px; height: 1px; background: var(--gold); margin: 1.5rem 0; }
+
+.btn-primary {
+  display: inline-block;
+  background: var(--dark);
+  color: var(--white);
+  font-family: var(--sans);
+  font-size: .78rem;
+  font-weight: 500;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  padding: 1rem 2.4rem;
+  text-decoration: none;
+  transition: background .2s, transform .2s;
+}
+.btn-primary:hover { background: var(--gold); transform: translateY(-1px); }
+
+.reveal { opacity: 0; transform: translateY(28px); transition: opacity .7s ease, transform .7s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* ── BREADCRUMB ── */
+.breadcrumb {
+  display: flex; align-items: center; flex-wrap: wrap; gap: .6rem;
+  font-size: .72rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--light);
+  margin-bottom: 2.5rem;
+}
+.breadcrumb a { color: var(--light); text-decoration: none; transition: color .2s; }
+.breadcrumb a:hover { color: var(--gold); }
+.breadcrumb .sep { color: rgba(184,151,90,.5); }
+.breadcrumb .current { color: var(--mid); }
+
+/* ── TESTATA APPARTAMENTO ── */
+.apt-hero { padding-top: 130px; padding-bottom: 3rem; }
+.apt-hero-head {
+  display: flex; justify-content: space-between; align-items: flex-end;
+  gap: 2rem; flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+.apt-title {
+  font-family: var(--serif);
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  font-weight: 300;
+  line-height: 1.12;
+  color: var(--dark);
+}
+.apt-title em { font-style: italic; color: var(--gold); }
+.apt-subtitle {
+  font-size: .9rem;
+  color: var(--mid);
+  font-weight: 300;
+  margin-top: 1rem;
+  letter-spacing: .03em;
+}
+.apt-subtitle .dot { color: var(--gold); padding: 0 .35rem; }
+
+/* Badge disponibilità (gestito da JS + status.json) */
+.apt-avail {
+  display: inline-flex; align-items: center; gap: .55rem;
+  font-size: .7rem; font-weight: 500;
+  letter-spacing: .14em; text-transform: uppercase;
+  padding: .55rem 1.1rem;
+  border: 1px solid rgba(184,151,90,.35);
+  color: var(--mid);
+  white-space: nowrap;
+}
+.apt-avail .avail-dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: #7da87b;
+  flex-shrink: 0;
+}
+.apt-avail[data-state="busy"] .avail-dot { background: #b8975a; }
+.apt-avail[data-state="busy"] { color: var(--gold); border-color: var(--gold); }
+
+/* Banner occupato */
+.occ-banner {
+  display: flex; align-items: center; gap: 1.6rem; flex-wrap: wrap;
+  background: var(--dark);
+  border-left: 3px solid var(--gold);
+  padding: 1.8rem 2.2rem;
+  margin-bottom: 2.5rem;
+}
+.occ-banner[hidden] { display: none; }
+.occ-banner-icon {
+  width: 42px; height: 42px; flex-shrink: 0;
+  border-radius: 50%;
+  background: rgba(184,151,90,.15);
+  border: 1.5px solid var(--gold);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--gold);
+}
+.occ-banner-body { flex: 1; min-width: 260px; }
+.occ-banner-title {
+  font-family: var(--serif);
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: var(--white);
+  margin-bottom: .3rem;
+}
+.occ-banner-text {
+  font-size: .82rem;
+  color: rgba(255,255,255,.55);
+  font-weight: 300;
+  line-height: 1.65;
+}
+.occ-banner .btn-primary { background: var(--gold); color: var(--dark); }
+.occ-banner .btn-primary:hover { background: var(--gold-lt); }
+
+/* ── GALLERY GRANDE ── */
+.apt-gallery {
+  position: relative;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  background: var(--dark);
+}
+.gallery-slider { position: relative; width: 100%; height: 100%; }
+.gallery-slide { position: absolute; inset: 0; opacity: 0; transition: opacity .4s ease; }
+.gallery-slide.active { opacity: 1; }
+.gallery-slide img {
+  width: 100%; height: 100%;
+  object-fit: cover; display: block;
+  cursor: zoom-in;
+}
+.gallery-btn {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  background: rgba(28,26,22,.55); border: none; color: #fff;
+  font-size: 1.8rem; line-height: 1; padding: .5rem 1rem;
+  cursor: pointer; z-index: 3; transition: background .2s;
+}
+.gallery-btn:hover { background: rgba(184,151,90,.8); }
+.gallery-prev { left: .8rem; }
+.gallery-next { right: .8rem; }
+.gallery-counter {
+  position: absolute; bottom: .9rem; right: 1rem;
+  background: rgba(28,26,22,.6); color: rgba(255,255,255,.8);
+  font-size: .65rem; letter-spacing: .08em;
+  padding: .25rem .7rem; z-index: 3;
+}
+.apt-gallery-placeholder {
+  aspect-ratio: 16/9;
+  display: flex; align-items: center; justify-content: center;
+  flex-direction: column; gap: .8rem;
+  background: var(--warm);
+  border: 1.5px dashed rgba(184,151,90,.3);
+}
+.apt-gallery-placeholder svg { color: rgba(184,151,90,.4); }
+.apt-gallery-placeholder span {
+  font-size: .75rem; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--light);
+}
+
+/* ── CORPO PAGINA ── */
+.apt-detail { background: var(--warm); }
+.apt-detail-grid {
+  display: grid;
+  grid-template-columns: 1.7fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+.detail-h2 {
+  font-family: var(--serif);
+  font-size: clamp(1.7rem, 2.8vw, 2.3rem);
+  font-weight: 300;
+  color: var(--dark);
+}
+.detail-h2 em { font-style: italic; color: var(--gold); }
+.detail-h3 {
+  font-family: var(--serif);
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: var(--dark);
+  margin: 2.6rem 0 1.1rem;
+}
+.detail-desc {
+  font-size: .93rem;
+  color: var(--mid);
+  font-weight: 300;
+  line-height: 1.85;
+}
+.apt-features {
+  display: flex; flex-wrap: wrap; gap: .8rem 1.4rem;
+}
+.apt-feat {
+  display: flex; align-items: center; gap: .4rem;
+  font-size: .78rem;
+  color: var(--mid);
+  white-space: nowrap;
+}
+.apt-feat svg { color: var(--gold); flex-shrink: 0; }
+.included-list { list-style: none; display: flex; flex-direction: column; gap: .7rem; }
+.included-list li {
+  display: flex; align-items: flex-start; gap: .6rem;
+  font-size: .87rem; color: var(--mid); font-weight: 300; line-height: 1.6;
+}
+.included-list li::before {
+  content: '✓';
+  color: var(--gold);
+  font-weight: 500;
+  flex-shrink: 0;
+}
+.zone-text {
+  font-size: .9rem; color: var(--mid); font-weight: 300; line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+.apt-map {
+  aspect-ratio: 16/8;
+  background: var(--cream);
+  border: 1px solid rgba(184,151,90,.2);
+}
+.apt-map iframe { width: 100%; height: 100%; border: 0; display: block; }
+
+/* Colonna prezzo sticky */
+.apt-side { position: sticky; top: 100px; }
+.side-card {
+  background: var(--dark);
+  padding: 2.5rem;
+  display: flex; flex-direction: column; gap: 1.1rem;
+}
+.side-price-label {
+  font-size: .65rem; letter-spacing: .2em;
+  text-transform: uppercase; color: var(--gold);
+}
+.side-price {
+  font-family: var(--serif);
+  font-size: 2.6rem; font-weight: 300;
+  color: var(--white); line-height: 1;
+}
+.side-price .mo { font-size: 1rem; color: rgba(255,255,255,.45); }
+.side-price-note {
+  font-size: .72rem; color: rgba(255,255,255,.4);
+  font-style: italic; line-height: 1.6;
+}
+.side-points { list-style: none; display: flex; flex-direction: column; gap: .55rem; margin: .6rem 0; }
+.side-points li {
+  display: flex; align-items: flex-start; gap: .55rem;
+  font-size: .8rem; color: rgba(255,255,255,.6); font-weight: 300; line-height: 1.55;
+}
+.side-points li::before { content: '✓'; color: var(--gold); flex-shrink: 0; }
+.side-cta {
+  display: block; text-align: center;
+  background: var(--gold); color: var(--dark);
+  font-family: var(--sans); font-size: .78rem; font-weight: 500;
+  letter-spacing: .15em; text-transform: uppercase;
+  padding: 1.1rem; text-decoration: none;
+  transition: background .2s, transform .2s;
+  margin-top: .4rem;
+}
+.side-cta:hover { background: var(--gold-lt); transform: translateY(-1px); }
+.side-contact {
+  text-align: center;
+  font-size: .78rem; color: rgba(255,255,255,.4);
+  padding-top: .8rem;
+  border-top: 1px solid rgba(255,255,255,.08);
+}
+.side-contact a { color: var(--gold-lt); text-decoration: none; }
+.side-contact a:hover { color: var(--gold); }
+
+/* ── FORM CONTATTI ── */
+.apt-contact { background: var(--dark); }
+.apt-contact .section-eyebrow { color: var(--gold); }
+.apt-contact .section-title { color: var(--white); }
+.apt-contact .section-title em { color: var(--gold-lt); }
+.apt-contact .divider { background: var(--gold); }
+.apt-contact-lead {
+  font-size: .92rem; color: rgba(255,255,255,.55);
+  font-weight: 300; line-height: 1.75; max-width: 640px;
+  margin-bottom: 3rem;
+}
+.contact-form { display: flex; flex-direction: column; gap: 1.2rem; max-width: 760px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+.form-group { display: flex; flex-direction: column; gap: .5rem; }
+.form-label {
+  font-size: .65rem; letter-spacing: .15em;
+  text-transform: uppercase; color: rgba(255,255,255,.4);
+}
+.form-input, .form-select, .form-textarea {
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.1);
+  color: var(--white);
+  font-family: var(--sans);
+  font-size: .88rem;
+  font-weight: 300;
+  padding: .9rem 1.2rem;
+  outline: none;
+  transition: border-color .2s, background .2s;
+  width: 100%;
+}
+.form-input:focus, .form-select:focus, .form-textarea:focus {
+  border-color: var(--gold);
+  background: rgba(255,255,255,.09);
+}
+.form-input::placeholder, .form-textarea::placeholder { color: rgba(255,255,255,.25); }
+.form-select { appearance: none; cursor: pointer; }
+.form-select option { background: var(--dark); }
+.form-textarea { resize: vertical; min-height: 110px; }
+.form-check { display: flex; align-items: flex-start; gap: .8rem; margin-top: .4rem; }
+.form-check input[type="checkbox"] { margin-top: .2rem; accent-color: var(--gold); flex-shrink: 0; }
+.form-check label { font-size: .75rem; color: rgba(255,255,255,.35); line-height: 1.6; }
+.form-check a { color: var(--gold); }
+.btn-submit {
+  width: 100%;
+  background: var(--gold);
+  color: var(--dark);
+  border: none;
+  font-family: var(--sans);
+  font-size: .78rem;
+  font-weight: 500;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  padding: 1.1rem;
+  cursor: pointer;
+  transition: background .2s, transform .2s;
+  margin-top: .5rem;
+}
+.btn-submit:hover { background: var(--gold-lt); transform: translateY(-1px); }
+.form-success { display: none; text-align: center; padding: 3rem; border: 1px solid rgba(184,151,90,.3); max-width: 760px; }
+.form-success-icon { font-size: 2rem; margin-bottom: 1rem; }
+.form-success-title { font-family: var(--serif); font-size: 1.5rem; color: var(--white); margin-bottom: .5rem; }
+.form-success-text { font-size: .85rem; color: rgba(255,255,255,.5); }
+
+/* ── ALTRI APPARTAMENTI ── */
+.apt-others { background: var(--cream); }
+.others-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+.other-card {
+  display: block;
+  background: var(--white);
+  text-decoration: none;
+  color: var(--dark);
+  padding: 1.6rem 1.8rem;
+  border: 1px solid rgba(184,151,90,.15);
+  transition: transform .25s, box-shadow .25s, border-color .25s;
+}
+.other-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 50px rgba(28,26,22,.1);
+  border-color: rgba(184,151,90,.4);
+}
+.other-card-zone {
+  font-size: .62rem; letter-spacing: .15em;
+  text-transform: uppercase; color: var(--gold);
+  margin-bottom: .4rem;
+}
+.other-card-name { font-family: var(--serif); font-size: 1.15rem; font-weight: 400; line-height: 1.3; }
+.other-card-meta { font-size: .72rem; color: var(--light); margin-top: .5rem; }
+
+/* ── LIGHTBOX ── */
+.lightbox {
+  display: none; position: fixed; inset: 0;
+  background: rgba(20,18,14,.93);
+  z-index: 9999;
+  align-items: center; justify-content: center;
+  backdrop-filter: blur(4px);
+}
+.lightbox.open { display: flex; }
+.lightbox-img { max-width: 90vw; max-height: 88vh; object-fit: contain; box-shadow: 0 40px 100px rgba(0,0,0,.5); }
+.lightbox-close {
+  position: absolute; top: 1.5rem; right: 1.5rem;
+  background: none; border: none;
+  color: rgba(255,255,255,.7); font-size: 2rem;
+  cursor: pointer; line-height: 1; transition: color .2s;
+}
+.lightbox-close:hover { color: var(--gold); }
+.lightbox-prev, .lightbox-next {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  background: none; border: none;
+  color: rgba(255,255,255,.6); font-size: 2.5rem;
+  cursor: pointer; padding: 1rem; transition: color .2s;
+}
+.lightbox-prev:hover, .lightbox-next:hover { color: var(--gold); }
+.lightbox-prev { left: 1rem; }
+.lightbox-next { right: 1rem; }
+.lightbox-counter {
+  position: absolute; bottom: 1.5rem; left: 50%; transform: translateX(-50%);
+  font-family: var(--sans); font-size: .72rem;
+  letter-spacing: .1em; color: rgba(255,255,255,.5);
+}
+
+/* ── FOOTER (identico alla home) ── */
+footer {
+  background: #141210;
+  padding: 2.5rem 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid rgba(255,255,255,.06);
+}
+.footer-logo { font-family: var(--serif); font-size: 1.1rem; color: rgba(255,255,255,.4); }
+.footer-logo span { color: var(--gold); }
+.footer-copy { font-size: .72rem; color: rgba(255,255,255,.2); letter-spacing: .05em; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1024px) {
+  nav { padding: 1.2rem 2rem; }
+  nav.scrolled { padding: .9rem 2rem; }
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+  section { padding: 4rem 2rem; }
+  .apt-hero { padding-top: 110px; }
+  .apt-detail-grid { grid-template-columns: 1fr; gap: 3rem; }
+  .apt-side { position: static; }
+  .form-row { grid-template-columns: 1fr; }
+  footer { flex-direction: column; gap: 1rem; text-align: center; padding: 2rem; }
+}
+@media (max-width: 640px) {
+  .nav-cta { display: none; }
+  .apt-gallery { aspect-ratio: 4/3; }
+  .apt-hero-head { align-items: flex-start; flex-direction: column; }
+  .occ-banner { padding: 1.5rem; }
+}
