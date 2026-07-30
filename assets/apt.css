@@ -235,10 +235,11 @@ section { padding: 6rem 4rem; }
 .occ-banner .btn-primary { background: var(--gold); color: var(--dark); }
 .occ-banner .btn-primary:hover { background: var(--gold-lt); }
 
-/* ── GALLERY GRANDE ── */
+/* ── GALLERY (contenuta: max ~55% viewport, non a tutta pagina) ── */
 .apt-gallery {
   position: relative;
   aspect-ratio: 16/9;
+  max-width: 760px;
   overflow: hidden;
   background: var(--dark);
 }
@@ -267,6 +268,7 @@ section { padding: 6rem 4rem; }
 }
 .apt-gallery-placeholder {
   aspect-ratio: 16/9;
+  max-width: 760px;
   display: flex; align-items: center; justify-content: center;
   flex-direction: column; gap: .8rem;
   background: var(--warm);
