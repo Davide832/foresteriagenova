@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- v=3.4 | 2026-08-24 -->
+<!-- v=3.6 | 2026-08-24 -->
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -122,30 +122,17 @@
 </div>
 
 <main>
-<section class="apt-hero">
+<section class="apt-hero rv-hero">
   <div class="breadcrumb">
     <a href="/en/">Home</a> <span class="sep">&#8250;</span>
     <a href="/en/#appartamenti">Apartments</a> <span class="sep">&#8250;</span>
     <span class="current">Passo Pratogagliardo 2</span>
   </div>
-  <div class="apt-hero-head">
-    <div>
-      <p class="section-eyebrow">Bolzaneto / Pontedecimo &middot; Genova</p>
-      <h1 class="apt-title">Corporate housing apartment<br>in <em>Bolzaneto</em> — Passo Pratogagliardo 2</h1>
-      <p class="apt-subtitle">112 m² <span class="dot">·</span> 6 rooms <span class="dot">·</span> up to 8 people <span class="dot">·</span> 2 bathrooms</p>
-    </div>
-    <div class="apt-avail" id="aptAvail" hidden data-free="Available now" data-busy="Occupied until {d}">
-      <span class="avail-dot"></span><span id="aptAvailText"></span>
-    </div>
-  </div>
-  <div class="occ-banner" id="occBanner" hidden>
-    <div class="occ-banner-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
-    <div class="occ-banner-body">
-      <div class="occ-banner-title">Currently occupied until <span id="occDate"></span></div>
-      <div class="occ-banner-text">The apartment can already be booked for the following periods: your company can option it now and agree the move-in date for when the current contract expires. Contact us via the form or by email for a no-obligation proposal.</div>
-    </div>
-    <a class="btn-primary" href="#contatti-apt">Book the next available period</a>
-  </div>
+</section>
+
+<section class="apt-detail rv-detail">
+  <div class="rv-grid">
+    <div class="rv-media">
   <div class="apt-gallery reveal">
     <div class="gallery-slider" id="galleryMain">
         <div class="gallery-slide active"><img src="/img/prato/Prato-10.jpg" alt="Eat-in kitchen with living area – corporate housing apartment in Bolzaneto, Genoa" width="1536" height="2048" decoding="async"></div>
@@ -168,13 +155,41 @@
     <button class="gallery-btn gallery-next" onclick="galleryNext('galleryMain')" aria-label="Next photo">&#8250;</button>
     <span class="gallery-counter" id="galleryMain-counter">1 / 15</span>
   </div>
-</section>
-
-<section class="apt-detail">
-  <div class="apt-detail-grid">
-    <div class="apt-detail-main">
+      <div class="rv-thumbs" id="rvThumbs" aria-label="Photo">
+        <button class="rv-thumb active" type="button" aria-label="Photo 1"><img src="/img/prato/Prato-10.jpg" alt="" loading="lazy" decoding="async"></button>
+        <button class="rv-thumb" type="button" aria-label="Photo 2"><img src="/img/prato/Prato-11.jpg" alt="" loading="lazy" decoding="async"></button>
+        <button class="rv-thumb" type="button" aria-label="Photo 3"><img src="/img/prato/Prato-1.jpg" alt="" loading="lazy" decoding="async"></button>
+        <button class="rv-thumb" type="button" aria-label="Photo 4"><img src="/img/prato/Prato-2.jpg" alt="" loading="lazy" decoding="async"></button>
+        <button class="rv-thumb" type="button" aria-label="Photo 5"><img src="/img/prato/Prato-5.jpg" alt="" loading="lazy" decoding="async"></button>
+        <button class="rv-thumb" type="button" aria-label="Photo 6"><img src="/img/prato/Prato-12.jpg" alt="" loading="lazy" decoding="async"></button>
+        <button class="rv-thumb" type="button" aria-label="Photo 7"><img src="/img/prato/Prato-13.jpg" alt="" loading="lazy" decoding="async"></button>
+        <button class="rv-thumb" type="button" aria-label="Photo 8"><img src="/img/prato/Prato-3.jpg" alt="" loading="lazy" decoding="async"></button>
+        <button class="rv-thumb" type="button" aria-label="Photo 9"><img src="/img/prato/Prato-4.jpg" alt="" loading="lazy" decoding="async"></button>
+        <button class="rv-thumb" type="button" aria-label="Photo 10"><img src="/img/prato/Prato-6.jpg" alt="" loading="lazy" decoding="async"></button>
+        <button class="rv-thumb" type="button" aria-label="Photo 11"><img src="/img/prato/Prato-7.jpg" alt="" loading="lazy" decoding="async"></button>
+        <button class="rv-thumb" type="button" aria-label="Photo 12"><img src="/img/prato/Prato-8.jpg" alt="" loading="lazy" decoding="async"></button>
+        <button class="rv-thumb" type="button" aria-label="Photo 13"><img src="/img/prato/Prato-9.jpg" alt="" loading="lazy" decoding="async"></button>
+        <button class="rv-thumb" type="button" aria-label="Photo 14"><img src="/img/prato/Prato-14_add.jpg" alt="" loading="lazy" decoding="async"></button>
+        <button class="rv-thumb" type="button" aria-label="Photo 15"><img src="/img/prato/Prato-15.jpg" alt="" loading="lazy" decoding="async"></button>
+      </div>
+    </div>
+    <div class="rv-body">
+      <p class="section-eyebrow">Bolzaneto / Pontedecimo &middot; Genova</p>
+      <h1 class="apt-title">Corporate housing apartment<br>in <em>Bolzaneto</em> — Passo Pratogagliardo 2</h1>
+      <p class="apt-subtitle">112 m² <span class="dot">·</span> 6 rooms <span class="dot">·</span> up to 8 people <span class="dot">·</span> 2 bathrooms</p>
+      <div class="apt-avail" id="aptAvail" hidden data-free="Available now" data-busy="Occupied until {d}">
+        <span class="avail-dot"></span><span id="aptAvailText"></span>
+      </div>
+      <div class="occ-banner" id="occBanner" hidden>
+        <div class="occ-banner-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+        <div class="occ-banner-body">
+          <div class="occ-banner-title">Currently occupied until <span id="occDate"></span></div>
+          <div class="occ-banner-text">The apartment can already be booked for the following periods: your company can option it now and agree the move-in date for when the current contract expires. Contact us via the form or by email for a no-obligation proposal.</div>
+        </div>
+        <a class="btn-primary" href="#contatti-apt">Book the next available period</a>
+      </div>
+      <div class="rv-divider"></div>
       <h2 class="detail-h2">The <em>apartment</em></h2>
-      <div class="divider"></div>
       <p class="detail-desc">Newly renovated, fully furnished 112 sqm apartment on the second floor of a small building. 6 rooms: entrance hall, eat-in kitchen with lounge area and sofa bed, 3 twin bedrooms with single beds, 1 double bedroom, 2 bathrooms with shower. Every room has a Smart TV; the apartment has WiFi, washing machine, dishwasher, air conditioning and independent heating. Ideal for teams of up to 8 people on business assignment in Genoa.</p>
       <h3 class="detail-h3">Features</h3>
       <div class="apt-features">
@@ -188,30 +203,7 @@
           <span class="apt-feat"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/></svg> A/C + independent heating</span>
           <span class="apt-feat"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg> Smart TV in every room</span>
       </div>
-      <h3 class="detail-h3">Included in the rent</h3>
-      <ul class="included-list">
-          <li>Utilities (electricity, gas, water), internet and building service charges included up to the cap agreed in the proposal</li>
-          <li>Complete furnishings, equipped kitchen and full kit for every occupant</li>
-          <li>Third-party liability insurance cover included</li>
-          <li>Registered company-let (uso foresteria) contract: rent fully deductible from business income (Art. 95 TUIR)</li>
-          <li>Documented utilities reconciliation, annually or at contract end</li>
-      </ul>
-      <h3 class="detail-h3">The area and connections</h3>
-      <p class="zone-text">The apartment is in the upper Valpolcevera valley, served by the Genova San Biagio and Genova Pontedecimo railway stations — the closest ones — and a few minutes by car from the Genova Bolzaneto exit of the A7 motorway. It is an ideal base for staff working on construction sites and in the companies of the Valpolcevera and western Genoa; the city centre is about 15-20 minutes away by train or car. Supermarkets, a pharmacy and restaurants are a few minutes away.</p>
-      <h3 class="detail-h3">Close to the main work hubs</h3>
-      <ul class="included-list work-list">
-          <li>Istituto Italiano di Tecnologia (IIT): the Via Morego headquarters and the Pontedecimo robotics labs are a few minutes away</li>
-          <li>Valpolcevera infrastructure sites (Genoa railway junction and Terzo Valico works) in the immediate area</li>
-          <li>Hitachi Rail and Ansaldo Energia (Campi area) about 10-15 minutes by car</li>
-          <li>Port of Genoa and the Sampierdarena basin about 15 minutes by car</li>
-      </ul>
-      <div class="apt-map">
-        <iframe src="https://www.google.com/maps?q=Passo+Pratogagliardo+2,+16162+Genova&output=embed" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade" title="Map — Passo Pratogagliardo 2, Genoa"></iframe>
-      </div>
-    </div>
-    <aside class="apt-side">
-      <div class="side-card">
+      <div class="side-card side-card-inline">
         <div class="side-price-label">Monthly rent</div>
         <div class="side-price side-price-request">On request</div>
         <div class="side-price-note">Tailored quote based on contract duration, number of people and services required · reply within 24 working hours</div>
@@ -226,7 +218,39 @@
           <a href="tel:+393939523985">+39 393 952 3985</a>
         </div>
       </div>
-    </aside>
+    </div>
+  </div>
+  <div class="apt-bottom rv-bottom">
+      <div class="rv-block">
+        <div class="rv-divider"></div>
+        <h3 class="detail-h3">Included in the rent</h3>
+        <ul class="included-list">
+          <li>Utilities (electricity, gas, water), internet and building service charges included up to the cap agreed in the proposal</li>
+          <li>Complete furnishings, equipped kitchen and full kit for every occupant</li>
+          <li>Third-party liability insurance cover included</li>
+          <li>Registered company-let (uso foresteria) contract: rent fully deductible from business income (Art. 95 TUIR)</li>
+          <li>Documented utilities reconciliation, annually or at contract end</li>
+        </ul>
+      </div>
+      <div class="rv-block">
+        <div class="rv-divider"></div>
+        <h3 class="detail-h3">The area and connections</h3>
+        <p class="zone-text">The apartment is in the upper Valpolcevera valley, served by the Genova San Biagio and Genova Pontedecimo railway stations — the closest ones — and a few minutes by car from the Genova Bolzaneto exit of the A7 motorway. It is an ideal base for staff working on construction sites and in the companies of the Valpolcevera and western Genoa; the city centre is about 15-20 minutes away by train or car. Supermarkets, a pharmacy and restaurants are a few minutes away.</p>
+        <div class="apt-map">
+          <iframe src="https://www.google.com/maps?q=Passo+Pratogagliardo+2,+16162+Genova&output=embed" loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade" title="Map — Passo Pratogagliardo 2, Genoa"></iframe>
+        </div>
+      </div>
+      <div class="rv-block">
+        <div class="rv-divider"></div>
+        <h3 class="detail-h3">Close to the main work hubs</h3>
+        <ul class="included-list work-list">
+          <li>Istituto Italiano di Tecnologia (IIT): the Via Morego headquarters and the Pontedecimo robotics labs are a few minutes away</li>
+          <li>Valpolcevera infrastructure sites (Genoa railway junction and Terzo Valico works) in the immediate area</li>
+          <li>Hitachi Rail and Ansaldo Energia (Campi area) about 10-15 minutes by car</li>
+          <li>Port of Genoa and the Sampierdarena basin about 15 minutes by car</li>
+        </ul>
+      </div>
   </div>
 </section>
 
@@ -353,5 +377,45 @@
 </footer>
 
 <script src="/assets/apt.js"></script>
+<script>
+/* Miniature <-> slider: clic sulla miniatura cambia la slide; le frecce sincronizzano la miniatura. */
+(function () {
+  'use strict';
+  var slider = document.getElementById('galleryMain');
+  var strip = document.getElementById('rvThumbs');
+  if (!slider || !strip) return;
+  var thumbs = Array.prototype.slice.call(strip.querySelectorAll('.rv-thumb'));
+  var slides = Array.prototype.slice.call(slider.querySelectorAll('.gallery-slide'));
+  function currentIndex() {
+    for (var i = 0; i < slides.length; i++) { if (slides[i].classList.contains('active')) return i; }
+    return 0;
+  }
+  function centerThumb(i) {
+    var t = thumbs[i];
+    if (!t) return;
+    strip.scrollLeft = t.offsetLeft - strip.clientWidth / 2 + t.offsetWidth / 2;
+  }
+  function syncThumbs() {
+    var cur = currentIndex();
+    thumbs.forEach(function (t, i) { t.classList.toggle('active', i === cur); });
+    centerThumb(cur);
+  }
+  thumbs.forEach(function (t, i) {
+    t.addEventListener('click', function () {
+      slides.forEach(function (s, j) { s.classList.toggle('active', j === i); });
+      var counter = document.getElementById('galleryMain-counter');
+      if (counter) counter.textContent = (i + 1) + ' / ' + slides.length;
+      syncThumbs();
+    });
+  });
+  if (typeof window.galleryGo === 'function') {
+    var origGo = window.galleryGo;
+    window.galleryGo = function (id, dir) {
+      origGo(id, dir);
+      if (id === 'galleryMain') syncThumbs();
+    };
+  }
+})();
+</script>
 </body>
 </html>

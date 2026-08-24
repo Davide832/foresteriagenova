@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- v=3.4 | 2026-08-24 -->
+<!-- v=3.6 | 2026-08-24 -->
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
@@ -122,30 +122,17 @@
 </div>
 
 <main>
-<section class="apt-hero">
+<section class="apt-hero rv-hero">
   <div class="breadcrumb">
     <a href="/fr/">Accueil</a> <span class="sep">&#8250;</span>
     <a href="/fr/#appartamenti">Appartements</a> <span class="sep">&#8250;</span>
     <span class="current">Passo Pratogagliardo 2</span>
   </div>
-  <div class="apt-hero-head">
-    <div>
-      <p class="section-eyebrow">Bolzaneto / Pontedecimo &middot; Genova</p>
-      <h1 class="apt-title">Appartement usage foresteria<br>à <em>Bolzaneto</em> — Passo Pratogagliardo 2</h1>
-      <p class="apt-subtitle">112 m² <span class="dot">·</span> 6 pièces <span class="dot">·</span> jusqu'à 8 personnes <span class="dot">·</span> 2 salles de bains</p>
-    </div>
-    <div class="apt-avail" id="aptAvail" hidden data-free="Disponible maintenant" data-busy="Occupé jusqu&#x27;au {d}">
-      <span class="avail-dot"></span><span id="aptAvailText"></span>
-    </div>
-  </div>
-  <div class="occ-banner" id="occBanner" hidden>
-    <div class="occ-banner-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
-    <div class="occ-banner-body">
-      <div class="occ-banner-title">Actuellement occupé jusqu'au <span id="occDate"></span></div>
-      <div class="occ-banner-text">L&rsquo;appartement est d&eacute;j&agrave; r&eacute;servable pour les p&eacute;riodes suivantes : votre entreprise peut le r&eacute;server d&egrave;s maintenant et convenir de l&rsquo;entr&eacute;e &agrave; l&rsquo;&eacute;ch&eacute;ance du contrat en cours. Contactez-nous via le formulaire ou par email pour une proposition sans engagement.</div>
-    </div>
-    <a class="btn-primary" href="#contatti-apt">Réserver la période suivante</a>
-  </div>
+</section>
+
+<section class="apt-detail rv-detail">
+  <div class="rv-grid">
+    <div class="rv-media">
   <div class="apt-gallery reveal">
     <div class="gallery-slider" id="galleryMain">
         <div class="gallery-slide active"><img src="/img/prato/Prato-10.jpg" alt="Grande cuisine avec séjour – appartement usage foresteria à Bolzaneto, Gênes" width="1536" height="2048" decoding="async"></div>
@@ -168,13 +155,41 @@
     <button class="gallery-btn gallery-next" onclick="galleryNext('galleryMain')" aria-label="Photo suivante">&#8250;</button>
     <span class="gallery-counter" id="galleryMain-counter">1 / 15</span>
   </div>
-</section>
-
-<section class="apt-detail">
-  <div class="apt-detail-grid">
-    <div class="apt-detail-main">
+      <div class="rv-thumbs" id="rvThumbs" aria-label="Photo">
+        <button class="rv-thumb active" type="button" aria-label="Photo 1"><img src="/img/prato/Prato-10.jpg" alt="" loading="lazy" decoding="async"></button>
+        <button class="rv-thumb" type="button" aria-label="Photo 2"><img src="/img/prato/Prato-11.jpg" alt="" loading="lazy" decoding="async"></button>
+        <button class="rv-thumb" type="button" aria-label="Photo 3"><img src="/img/prato/Prato-1.jpg" alt="" loading="lazy" decoding="async"></button>
+        <button class="rv-thumb" type="button" aria-label="Photo 4"><img src="/img/prato/Prato-2.jpg" alt="" loading="lazy" decoding="async"></button>
+        <button class="rv-thumb" type="button" aria-label="Photo 5"><img src="/img/prato/Prato-5.jpg" alt="" loading="lazy" decoding="async"></button>
+        <button class="rv-thumb" type="button" aria-label="Photo 6"><img src="/img/prato/Prato-12.jpg" alt="" loading="lazy" decoding="async"></button>
+        <button class="rv-thumb" type="button" aria-label="Photo 7"><img src="/img/prato/Prato-13.jpg" alt="" loading="lazy" decoding="async"></button>
+        <button class="rv-thumb" type="button" aria-label="Photo 8"><img src="/img/prato/Prato-3.jpg" alt="" loading="lazy" decoding="async"></button>
+        <button class="rv-thumb" type="button" aria-label="Photo 9"><img src="/img/prato/Prato-4.jpg" alt="" loading="lazy" decoding="async"></button>
+        <button class="rv-thumb" type="button" aria-label="Photo 10"><img src="/img/prato/Prato-6.jpg" alt="" loading="lazy" decoding="async"></button>
+        <button class="rv-thumb" type="button" aria-label="Photo 11"><img src="/img/prato/Prato-7.jpg" alt="" loading="lazy" decoding="async"></button>
+        <button class="rv-thumb" type="button" aria-label="Photo 12"><img src="/img/prato/Prato-8.jpg" alt="" loading="lazy" decoding="async"></button>
+        <button class="rv-thumb" type="button" aria-label="Photo 13"><img src="/img/prato/Prato-9.jpg" alt="" loading="lazy" decoding="async"></button>
+        <button class="rv-thumb" type="button" aria-label="Photo 14"><img src="/img/prato/Prato-14_add.jpg" alt="" loading="lazy" decoding="async"></button>
+        <button class="rv-thumb" type="button" aria-label="Photo 15"><img src="/img/prato/Prato-15.jpg" alt="" loading="lazy" decoding="async"></button>
+      </div>
+    </div>
+    <div class="rv-body">
+      <p class="section-eyebrow">Bolzaneto / Pontedecimo &middot; Genova</p>
+      <h1 class="apt-title">Appartement usage foresteria<br>à <em>Bolzaneto</em> — Passo Pratogagliardo 2</h1>
+      <p class="apt-subtitle">112 m² <span class="dot">·</span> 6 pièces <span class="dot">·</span> jusqu'à 8 personnes <span class="dot">·</span> 2 salles de bains</p>
+      <div class="apt-avail" id="aptAvail" hidden data-free="Disponible maintenant" data-busy="Occupé jusqu&#x27;au {d}">
+        <span class="avail-dot"></span><span id="aptAvailText"></span>
+      </div>
+      <div class="occ-banner" id="occBanner" hidden>
+        <div class="occ-banner-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+        <div class="occ-banner-body">
+          <div class="occ-banner-title">Actuellement occupé jusqu'au <span id="occDate"></span></div>
+          <div class="occ-banner-text">L&rsquo;appartement est d&eacute;j&agrave; r&eacute;servable pour les p&eacute;riodes suivantes : votre entreprise peut le r&eacute;server d&egrave;s maintenant et convenir de l&rsquo;entr&eacute;e &agrave; l&rsquo;&eacute;ch&eacute;ance du contrat en cours. Contactez-nous via le formulaire ou par email pour une proposition sans engagement.</div>
+        </div>
+        <a class="btn-primary" href="#contatti-apt">Réserver la période suivante</a>
+      </div>
+      <div class="rv-divider"></div>
       <h2 class="detail-h2">L&rsquo;<em>appartement</em></h2>
-      <div class="divider"></div>
       <p class="detail-desc">Appartement de 112 m² récemment rénové et entièrement meublé, au deuxième étage d&#x27;un petit immeuble. 6 pièces : entrée, grande cuisine avec salon et canapé-lit, 3 chambres doubles à lits simples, 1 chambre avec lit double, 2 salles de bains avec douche. Chaque chambre est équipée d&#x27;une Smart TV ; l&#x27;appartement dispose du WiFi, d&#x27;un lave-linge, d&#x27;un lave-vaisselle, de la climatisation et d&#x27;un chauffage autonome. Idéal pour des équipes jusqu&#x27;à 8 personnes en mission professionnelle à Gênes.</p>
       <h3 class="detail-h3">Caractéristiques</h3>
       <div class="apt-features">
@@ -188,30 +203,7 @@
           <span class="apt-feat"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/></svg> Clim + chauffage autonome</span>
           <span class="apt-feat"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg> Smart TV dans chaque chambre</span>
       </div>
-      <h3 class="detail-h3">Inclus dans le loyer</h3>
-      <ul class="included-list">
-          <li>Charges (électricité, gaz, eau), internet et charges de copropriété incluses jusqu&#x27;au plafond convenu dans la proposition</li>
-          <li>Ameublement complet, cuisine équipée et équipements pour chaque occupant</li>
-          <li>Couverture d&#x27;assurance responsabilité civile envers les tiers incluse</li>
-          <li>Contrat d&#x27;usage foresteria enregistré : loyer entièrement déductible du revenu d&#x27;entreprise (art. 95 TUIR)</li>
-          <li>Régularisation des charges documentée, annuelle ou en fin de contrat</li>
-      </ul>
-      <h3 class="detail-h3">Le quartier et les liaisons</h3>
-      <p class="zone-text">L&#x27;appartement se trouve dans la haute Valpolcevera, desservi par les gares de Genova San Biagio et Genova Pontedecimo — les plus proches — et à quelques minutes en voiture du péage Genova Bolzaneto de l&#x27;autoroute A7. Une base idéale pour le personnel employé sur les chantiers et dans les entreprises de la Valpolcevera et de l&#x27;ouest génois ; le centre de Gênes se rejoint en train ou en voiture en 15-20 minutes environ. Supermarchés, pharmacie et restaurants sont accessibles en quelques minutes.</p>
-      <h3 class="detail-h3">À proximité des principaux pôles d&#x27;activité</h3>
-      <ul class="included-list work-list">
-          <li>Istituto Italiano di Tecnologia (IIT) : le siège de Via Morego et les laboratoires de robotique de Pontedecimo à quelques minutes</li>
-          <li>Chantiers d&#x27;infrastructure de la Valpolcevera (nœud ferroviaire de Gênes et Terzo Valico) à proximité immédiate</li>
-          <li>Hitachi Rail et Ansaldo Energia (zone Campi) à 10-15 minutes environ en voiture</li>
-          <li>Port de Gênes et bassin de Sampierdarena à 15 minutes environ en voiture</li>
-      </ul>
-      <div class="apt-map">
-        <iframe src="https://www.google.com/maps?q=Passo+Pratogagliardo+2,+16162+Genova&output=embed" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade" title="Carte — Passo Pratogagliardo 2, Gênes"></iframe>
-      </div>
-    </div>
-    <aside class="apt-side">
-      <div class="side-card">
+      <div class="side-card side-card-inline">
         <div class="side-price-label">Loyer mensuel</div>
         <div class="side-price side-price-request">Sur demande</div>
         <div class="side-price-note">Devis personnalisé selon la durée du contrat, le nombre de personnes et les services requis · réponse sous 24 h ouvrées</div>
@@ -226,7 +218,39 @@
           <a href="tel:+393939523985">+39 393 952 3985</a>
         </div>
       </div>
-    </aside>
+    </div>
+  </div>
+  <div class="apt-bottom rv-bottom">
+      <div class="rv-block">
+        <div class="rv-divider"></div>
+        <h3 class="detail-h3">Inclus dans le loyer</h3>
+        <ul class="included-list">
+          <li>Charges (électricité, gaz, eau), internet et charges de copropriété incluses jusqu&#x27;au plafond convenu dans la proposition</li>
+          <li>Ameublement complet, cuisine équipée et équipements pour chaque occupant</li>
+          <li>Couverture d&#x27;assurance responsabilité civile envers les tiers incluse</li>
+          <li>Contrat d&#x27;usage foresteria enregistré : loyer entièrement déductible du revenu d&#x27;entreprise (art. 95 TUIR)</li>
+          <li>Régularisation des charges documentée, annuelle ou en fin de contrat</li>
+        </ul>
+      </div>
+      <div class="rv-block">
+        <div class="rv-divider"></div>
+        <h3 class="detail-h3">Le quartier et les liaisons</h3>
+        <p class="zone-text">L&#x27;appartement se trouve dans la haute Valpolcevera, desservi par les gares de Genova San Biagio et Genova Pontedecimo — les plus proches — et à quelques minutes en voiture du péage Genova Bolzaneto de l&#x27;autoroute A7. Une base idéale pour le personnel employé sur les chantiers et dans les entreprises de la Valpolcevera et de l&#x27;ouest génois ; le centre de Gênes se rejoint en train ou en voiture en 15-20 minutes environ. Supermarchés, pharmacie et restaurants sont accessibles en quelques minutes.</p>
+        <div class="apt-map">
+          <iframe src="https://www.google.com/maps?q=Passo+Pratogagliardo+2,+16162+Genova&output=embed" loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade" title="Carte — Passo Pratogagliardo 2, Gênes"></iframe>
+        </div>
+      </div>
+      <div class="rv-block">
+        <div class="rv-divider"></div>
+        <h3 class="detail-h3">À proximité des principaux pôles d&#x27;activité</h3>
+        <ul class="included-list work-list">
+          <li>Istituto Italiano di Tecnologia (IIT) : le siège de Via Morego et les laboratoires de robotique de Pontedecimo à quelques minutes</li>
+          <li>Chantiers d&#x27;infrastructure de la Valpolcevera (nœud ferroviaire de Gênes et Terzo Valico) à proximité immédiate</li>
+          <li>Hitachi Rail et Ansaldo Energia (zone Campi) à 10-15 minutes environ en voiture</li>
+          <li>Port de Gênes et bassin de Sampierdarena à 15 minutes environ en voiture</li>
+        </ul>
+      </div>
   </div>
 </section>
 
@@ -353,5 +377,45 @@
 </footer>
 
 <script src="/assets/apt.js"></script>
+<script>
+/* Miniature <-> slider: clic sulla miniatura cambia la slide; le frecce sincronizzano la miniatura. */
+(function () {
+  'use strict';
+  var slider = document.getElementById('galleryMain');
+  var strip = document.getElementById('rvThumbs');
+  if (!slider || !strip) return;
+  var thumbs = Array.prototype.slice.call(strip.querySelectorAll('.rv-thumb'));
+  var slides = Array.prototype.slice.call(slider.querySelectorAll('.gallery-slide'));
+  function currentIndex() {
+    for (var i = 0; i < slides.length; i++) { if (slides[i].classList.contains('active')) return i; }
+    return 0;
+  }
+  function centerThumb(i) {
+    var t = thumbs[i];
+    if (!t) return;
+    strip.scrollLeft = t.offsetLeft - strip.clientWidth / 2 + t.offsetWidth / 2;
+  }
+  function syncThumbs() {
+    var cur = currentIndex();
+    thumbs.forEach(function (t, i) { t.classList.toggle('active', i === cur); });
+    centerThumb(cur);
+  }
+  thumbs.forEach(function (t, i) {
+    t.addEventListener('click', function () {
+      slides.forEach(function (s, j) { s.classList.toggle('active', j === i); });
+      var counter = document.getElementById('galleryMain-counter');
+      if (counter) counter.textContent = (i + 1) + ' / ' + slides.length;
+      syncThumbs();
+    });
+  });
+  if (typeof window.galleryGo === 'function') {
+    var origGo = window.galleryGo;
+    window.galleryGo = function (id, dir) {
+      origGo(id, dir);
+      if (id === 'galleryMain') syncThumbs();
+    };
+  }
+})();
+</script>
 </body>
 </html>

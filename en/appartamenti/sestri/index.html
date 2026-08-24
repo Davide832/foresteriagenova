@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- v=3.4 | 2026-08-24 -->
+<!-- v=3.6 | 2026-08-24 -->
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -122,41 +122,40 @@
 </div>
 
 <main>
-<section class="apt-hero">
+<section class="apt-hero rv-hero">
   <div class="breadcrumb">
     <a href="/en/">Home</a> <span class="sep">&#8250;</span>
     <a href="/en/#appartamenti">Apartments</a> <span class="sep">&#8250;</span>
     <span class="current">Via San Giovanni Battista 53</span>
   </div>
-  <div class="apt-hero-head">
-    <div>
-      <p class="section-eyebrow">Sestri Ponente &middot; Genova</p>
-      <h1 class="apt-title">Corporate housing apartment<br>in <em>Sestri Ponente</em> — Via S. Giovanni Battista 53</h1>
-      <p class="apt-subtitle">70 m² <span class="dot">·</span> 3 rooms <span class="dot">·</span> up to 4 people <span class="dot">·</span> parking space included</p>
-    </div>
-    <div class="apt-avail" id="aptAvail" hidden data-free="Available now" data-busy="Occupied until {d}">
-      <span class="avail-dot"></span><span id="aptAvailText"></span>
-    </div>
-  </div>
-  <div class="occ-banner" id="occBanner" hidden>
-    <div class="occ-banner-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
-    <div class="occ-banner-body">
-      <div class="occ-banner-title">Currently occupied until <span id="occDate"></span></div>
-      <div class="occ-banner-text">The apartment can already be booked for the following periods: your company can option it now and agree the move-in date for when the current contract expires. Contact us via the form or by email for a no-obligation proposal.</div>
-    </div>
-    <a class="btn-primary" href="#contatti-apt">Book the next available period</a>
-  </div>
+</section>
+
+<section class="apt-detail rv-detail">
+  <div class="rv-grid">
+    <div class="rv-media">
   <div class="apt-gallery-placeholder reveal">
     <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
     <span>Photos coming soon — request them by email or via the form</span>
   </div>
-</section>
 
-<section class="apt-detail">
-  <div class="apt-detail-grid">
-    <div class="apt-detail-main">
+    </div>
+    <div class="rv-body">
+      <p class="section-eyebrow">Sestri Ponente &middot; Genova</p>
+      <h1 class="apt-title">Corporate housing apartment<br>in <em>Sestri Ponente</em> — Via S. Giovanni Battista 53</h1>
+      <p class="apt-subtitle">70 m² <span class="dot">·</span> 3 rooms <span class="dot">·</span> up to 4 people <span class="dot">·</span> parking space included</p>
+      <div class="apt-avail" id="aptAvail" hidden data-free="Available now" data-busy="Occupied until {d}">
+        <span class="avail-dot"></span><span id="aptAvailText"></span>
+      </div>
+      <div class="occ-banner" id="occBanner" hidden>
+        <div class="occ-banner-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+        <div class="occ-banner-body">
+          <div class="occ-banner-title">Currently occupied until <span id="occDate"></span></div>
+          <div class="occ-banner-text">The apartment can already be booked for the following periods: your company can option it now and agree the move-in date for when the current contract expires. Contact us via the form or by email for a no-obligation proposal.</div>
+        </div>
+        <a class="btn-primary" href="#contatti-apt">Book the next available period</a>
+      </div>
+      <div class="rv-divider"></div>
       <h2 class="detail-h2">The <em>apartment</em></h2>
-      <div class="divider"></div>
       <p class="detail-desc">Fully furnished and equipped 70 sqm apartment on the fourth floor with lift. 3 rooms: hallway, eat-in kitchen, 2 twin bedrooms with single beds, bathroom with shower. Parking space included. Smart TV in every room, WiFi, washing machine and independent heating. Ideal for teams of up to 4 people on assignment in Genoa.</p>
       <h3 class="detail-h3">Features</h3>
       <div class="apt-features">
@@ -170,30 +169,7 @@
           <span class="apt-feat"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg> Washing machine</span>
           <span class="apt-feat"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/></svg> Independent heating</span>
       </div>
-      <h3 class="detail-h3">Included in the rent</h3>
-      <ul class="included-list">
-          <li>Utilities (electricity, gas, water), internet and building service charges included up to the cap agreed in the proposal</li>
-          <li>Complete furnishings, equipped kitchen and full kit for every occupant</li>
-          <li>Third-party liability insurance cover included</li>
-          <li>Registered company-let (uso foresteria) contract: rent fully deductible from business income (Art. 95 TUIR)</li>
-          <li>Documented utilities reconciliation, annually or at contract end</li>
-      </ul>
-      <h3 class="detail-h3">The area and connections</h3>
-      <p class="zone-text">In Sestri Ponente, the heart of Genoa&#x27;s shipbuilding district: an ideal position for staff working in the shipyards and plants of western Genoa. Genoa Cristoforo Colombo airport is a few minutes away by car, Genoa Sestri Ponente railway station is within walking distance and the nearest motorway exit is Genova Aeroporto. The street is well served by shops and restaurants.</p>
-      <h3 class="detail-h3">Close to the main work hubs</h3>
-      <ul class="included-list work-list">
-          <li>Fincantieri and the Sestri Ponente shipyards a few minutes away</li>
-          <li>ABB (Via Albareto) and Cristoforo Colombo airport about 5 minutes by car</li>
-          <li>Erzelli technology park (Ericsson, Esaote, Siemens, IIT) about 10 minutes away</li>
-          <li>Ansaldo Energia and the Port of Genoa about 10-15 minutes by car</li>
-      </ul>
-      <div class="apt-map">
-        <iframe src="https://www.google.com/maps?q=Via+San+Giovanni+Battista+53,+16154+Genova&output=embed" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade" title="Map — Via San Giovanni Battista 53, Genoa"></iframe>
-      </div>
-    </div>
-    <aside class="apt-side">
-      <div class="side-card">
+      <div class="side-card side-card-inline">
         <div class="side-price-label">Monthly rent</div>
         <div class="side-price side-price-request">On request</div>
         <div class="side-price-note">Tailored quote based on contract duration, number of people and services required · reply within 24 working hours</div>
@@ -208,7 +184,39 @@
           <a href="tel:+393939523985">+39 393 952 3985</a>
         </div>
       </div>
-    </aside>
+    </div>
+  </div>
+  <div class="apt-bottom rv-bottom">
+      <div class="rv-block">
+        <div class="rv-divider"></div>
+        <h3 class="detail-h3">Included in the rent</h3>
+        <ul class="included-list">
+          <li>Utilities (electricity, gas, water), internet and building service charges included up to the cap agreed in the proposal</li>
+          <li>Complete furnishings, equipped kitchen and full kit for every occupant</li>
+          <li>Third-party liability insurance cover included</li>
+          <li>Registered company-let (uso foresteria) contract: rent fully deductible from business income (Art. 95 TUIR)</li>
+          <li>Documented utilities reconciliation, annually or at contract end</li>
+        </ul>
+      </div>
+      <div class="rv-block">
+        <div class="rv-divider"></div>
+        <h3 class="detail-h3">The area and connections</h3>
+        <p class="zone-text">In Sestri Ponente, the heart of Genoa&#x27;s shipbuilding district: an ideal position for staff working in the shipyards and plants of western Genoa. Genoa Cristoforo Colombo airport is a few minutes away by car, Genoa Sestri Ponente railway station is within walking distance and the nearest motorway exit is Genova Aeroporto. The street is well served by shops and restaurants.</p>
+        <div class="apt-map">
+          <iframe src="https://www.google.com/maps?q=Via+San+Giovanni+Battista+53,+16154+Genova&output=embed" loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade" title="Map — Via San Giovanni Battista 53, Genoa"></iframe>
+        </div>
+      </div>
+      <div class="rv-block">
+        <div class="rv-divider"></div>
+        <h3 class="detail-h3">Close to the main work hubs</h3>
+        <ul class="included-list work-list">
+          <li>Fincantieri and the Sestri Ponente shipyards a few minutes away</li>
+          <li>ABB (Via Albareto) and Cristoforo Colombo airport about 5 minutes by car</li>
+          <li>Erzelli technology park (Ericsson, Esaote, Siemens, IIT) about 10 minutes away</li>
+          <li>Ansaldo Energia and the Port of Genoa about 10-15 minutes by car</li>
+        </ul>
+      </div>
   </div>
 </section>
 
@@ -335,5 +343,6 @@
 </footer>
 
 <script src="/assets/apt.js"></script>
+
 </body>
 </html>

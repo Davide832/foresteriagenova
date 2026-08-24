@@ -4,3 +4,6 @@ index_v*.html
 
 # Contesto interno (contiene tabella prezzi e key Web3Forms)
 CLAUDE*.md
+
+# Proposte di design locali, mai da pubblicare
+_proposte/

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- v=3.4 | 2026-08-24 -->
+<!-- v=3.6 | 2026-08-24 -->
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -122,30 +122,17 @@
 </div>
 
 <main>
-<section class="apt-hero">
+<section class="apt-hero rv-hero">
   <div class="breadcrumb">
     <a href="/en/">Home</a> <span class="sep">&#8250;</span>
     <a href="/en/#appartamenti">Apartments</a> <span class="sep">&#8250;</span>
     <span class="current">Via Sampierdarena 17 — B</span>
   </div>
-  <div class="apt-hero-head">
-    <div>
-      <p class="section-eyebrow">Sampierdarena &middot; Genova</p>
-      <h1 class="apt-title">Corporate housing apartment<br>in <em>Sampierdarena</em> — Via Sampierdarena 17, unit B</h1>
-      <p class="apt-subtitle">109 m² <span class="dot">·</span> 6 rooms <span class="dot">·</span> up to 7 people <span class="dot">·</span> liveable terrace</p>
-    </div>
-    <div class="apt-avail" id="aptAvail" hidden data-free="Available now" data-busy="Occupied until {d}">
-      <span class="avail-dot"></span><span id="aptAvailText"></span>
-    </div>
-  </div>
-  <div class="occ-banner" id="occBanner" hidden>
-    <div class="occ-banner-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
-    <div class="occ-banner-body">
-      <div class="occ-banner-title">Currently occupied until <span id="occDate"></span></div>
-      <div class="occ-banner-text">The apartment can already be booked for the following periods: your company can option it now and agree the move-in date for when the current contract expires. Contact us via the form or by email for a no-obligation proposal.</div>
-    </div>
-    <a class="btn-primary" href="#contatti-apt">Book the next available period</a>
-  </div>
+</section>
+
+<section class="apt-detail rv-detail">
+  <div class="rv-grid">
+    <div class="rv-media">
   <div class="apt-gallery reveal">
     <div class="gallery-slider" id="galleryMain">
         <div class="gallery-slide active"><img src="/img/sampierdarena-b/SampierdarenaB-1.jpg" alt="Entrance hallway – corporate housing apartment B in Sampierdarena, Genoa" width="1200" height="1600" decoding="async"></div>
@@ -169,13 +156,42 @@
     <button class="gallery-btn gallery-next" onclick="galleryNext('galleryMain')" aria-label="Next photo">&#8250;</button>
     <span class="gallery-counter" id="galleryMain-counter">1 / 16</span>
   </div>
-</section>
-
-<section class="apt-detail">
-  <div class="apt-detail-grid">
-    <div class="apt-detail-main">
+      <div class="rv-thumbs" id="rvThumbs" aria-label="Photo">
+        <button class="rv-thumb active" type="button" aria-label="Photo 1"><img src="/img/sampierdarena-b/SampierdarenaB-1.jpg" alt="" loading="lazy" decoding="async"></button>
+        <button class="rv-thumb" type="button" aria-label="Photo 2"><img src="/img/sampierdarena-b/SampierdarenaB-2.jpg" alt="" loading="lazy" decoding="async"></button>
+        <button class="rv-thumb" type="button" aria-label="Photo 3"><img src="/img/sampierdarena-b/SampierdarenaB-3.jpg" alt="" loading="lazy" decoding="async"></button>
+        <button class="rv-thumb" type="button" aria-label="Photo 4"><img src="/img/sampierdarena-b/SampierdarenaB-4.jpg" alt="" loading="lazy" decoding="async"></button>
+        <button class="rv-thumb" type="button" aria-label="Photo 5"><img src="/img/sampierdarena-b/SampierdarenaB-5.jpg" alt="" loading="lazy" decoding="async"></button>
+        <button class="rv-thumb" type="button" aria-label="Photo 6"><img src="/img/sampierdarena-b/SampierdarenaB-6.jpg" alt="" loading="lazy" decoding="async"></button>
+        <button class="rv-thumb" type="button" aria-label="Photo 7"><img src="/img/sampierdarena-b/SampierdarenaB-7.jpg" alt="" loading="lazy" decoding="async"></button>
+        <button class="rv-thumb" type="button" aria-label="Photo 8"><img src="/img/sampierdarena-b/SampierdarenaB-8.jpg" alt="" loading="lazy" decoding="async"></button>
+        <button class="rv-thumb" type="button" aria-label="Photo 9"><img src="/img/sampierdarena-b/SampierdarenaB-9.jpg" alt="" loading="lazy" decoding="async"></button>
+        <button class="rv-thumb" type="button" aria-label="Photo 10"><img src="/img/sampierdarena-b/SampierdarenaB-10.jpg" alt="" loading="lazy" decoding="async"></button>
+        <button class="rv-thumb" type="button" aria-label="Photo 11"><img src="/img/sampierdarena-b/SampierdarenaB-11.jpg" alt="" loading="lazy" decoding="async"></button>
+        <button class="rv-thumb" type="button" aria-label="Photo 12"><img src="/img/sampierdarena-b/SampierdarenaB-12.jpg" alt="" loading="lazy" decoding="async"></button>
+        <button class="rv-thumb" type="button" aria-label="Photo 13"><img src="/img/sampierdarena-b/SampierdarenaB-13.jpg" alt="" loading="lazy" decoding="async"></button>
+        <button class="rv-thumb" type="button" aria-label="Photo 14"><img src="/img/sampierdarena-b/SampierdarenaB-14.jpg" alt="" loading="lazy" decoding="async"></button>
+        <button class="rv-thumb" type="button" aria-label="Photo 15"><img src="/img/sampierdarena-b/SampierdarenaB-15.jpg" alt="" loading="lazy" decoding="async"></button>
+        <button class="rv-thumb" type="button" aria-label="Photo 16"><img src="/img/sampierdarena-b/SampierdarenaB-16.jpg" alt="" loading="lazy" decoding="async"></button>
+      </div>
+    </div>
+    <div class="rv-body">
+      <p class="section-eyebrow">Sampierdarena &middot; Genova</p>
+      <h1 class="apt-title">Corporate housing apartment<br>in <em>Sampierdarena</em> — Via Sampierdarena 17, unit B</h1>
+      <p class="apt-subtitle">109 m² <span class="dot">·</span> 6 rooms <span class="dot">·</span> up to 7 people <span class="dot">·</span> liveable terrace</p>
+      <div class="apt-avail" id="aptAvail" hidden data-free="Available now" data-busy="Occupied until {d}">
+        <span class="avail-dot"></span><span id="aptAvailText"></span>
+      </div>
+      <div class="occ-banner" id="occBanner" hidden>
+        <div class="occ-banner-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+        <div class="occ-banner-body">
+          <div class="occ-banner-title">Currently occupied until <span id="occDate"></span></div>
+          <div class="occ-banner-text">The apartment can already be booked for the following periods: your company can option it now and agree the move-in date for when the current contract expires. Contact us via the form or by email for a no-obligation proposal.</div>
+        </div>
+        <a class="btn-primary" href="#contatti-apt">Book the next available period</a>
+      </div>
+      <div class="rv-divider"></div>
       <h2 class="detail-h2">The <em>apartment</em></h2>
-      <div class="divider"></div>
       <p class="detail-desc">Newly renovated, fully furnished 109 sqm apartment on the second floor of a handsome historic building with lift. 6 rooms: hallway, eat-in kitchen, 3 twin bedrooms with single beds, 1 single bedroom, bathroom with shower. One of the bedrooms opens onto a liveable terrace. Smart TV in every room, WiFi, washing machine, dishwasher, air conditioning and independent heating. Ideal for teams of up to 7 people on assignment in Genoa.</p>
       <h3 class="detail-h3">Features</h3>
       <div class="apt-features">
@@ -191,30 +207,7 @@
           <span class="apt-feat"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg> Washing machine · Dishwasher</span>
           <span class="apt-feat"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/></svg> A/C + independent heating</span>
       </div>
-      <h3 class="detail-h3">Included in the rent</h3>
-      <ul class="included-list">
-          <li>Utilities (electricity, gas, water), internet and building service charges included up to the cap agreed in the proposal</li>
-          <li>Complete furnishings, equipped kitchen and full kit for every occupant</li>
-          <li>Third-party liability insurance cover included</li>
-          <li>Registered company-let (uso foresteria) contract: rent fully deductible from business income (Art. 95 TUIR)</li>
-          <li>Documented utilities reconciliation, annually or at contract end</li>
-      </ul>
-      <h3 class="detail-h3">The area and connections</h3>
-      <p class="zone-text">In the heart of Sampierdarena, a few minutes from Genoa Sampierdarena railway station and the port gates: a strategic position for staff working in the port basin, in ship repair and in the companies of western Genoa. The Genova Ovest motorway exit is about 5 minutes away by car; shops, supermarkets and restaurants are right downstairs along Via Sampierdarena. Free parking is easy to find in the area, a real advantage for staff travelling by car.</p>
-      <h3 class="detail-h3">Close to the main work hubs</h3>
-      <ul class="included-list work-list">
-          <li>Port of Genoa, terminals and ship-repair yards a few minutes away</li>
-          <li>Hitachi Rail in the district and Ansaldo Energia (Campi area) about 10 minutes away</li>
-          <li>Fincantieri Sestri Ponente, ABB (Via Albareto) and the Erzelli technology park 10-15 minutes by car</li>
-          <li>Istituto Italiano di Tecnologia (IIT, Via Morego) about 15 minutes by car</li>
-      </ul>
-      <div class="apt-map">
-        <iframe src="https://www.google.com/maps?q=Via+Sampierdarena+17,+16149+Genova&output=embed" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade" title="Map — Via Sampierdarena 17 — B, Genoa"></iframe>
-      </div>
-    </div>
-    <aside class="apt-side">
-      <div class="side-card">
+      <div class="side-card side-card-inline">
         <div class="side-price-label">Monthly rent</div>
         <div class="side-price side-price-request">On request</div>
         <div class="side-price-note">Tailored quote based on contract duration, number of people and services required · reply within 24 working hours</div>
@@ -229,7 +222,39 @@
           <a href="tel:+393939523985">+39 393 952 3985</a>
         </div>
       </div>
-    </aside>
+    </div>
+  </div>
+  <div class="apt-bottom rv-bottom">
+      <div class="rv-block">
+        <div class="rv-divider"></div>
+        <h3 class="detail-h3">Included in the rent</h3>
+        <ul class="included-list">
+          <li>Utilities (electricity, gas, water), internet and building service charges included up to the cap agreed in the proposal</li>
+          <li>Complete furnishings, equipped kitchen and full kit for every occupant</li>
+          <li>Third-party liability insurance cover included</li>
+          <li>Registered company-let (uso foresteria) contract: rent fully deductible from business income (Art. 95 TUIR)</li>
+          <li>Documented utilities reconciliation, annually or at contract end</li>
+        </ul>
+      </div>
+      <div class="rv-block">
+        <div class="rv-divider"></div>
+        <h3 class="detail-h3">The area and connections</h3>
+        <p class="zone-text">In the heart of Sampierdarena, a few minutes from Genoa Sampierdarena railway station and the port gates: a strategic position for staff working in the port basin, in ship repair and in the companies of western Genoa. The Genova Ovest motorway exit is about 5 minutes away by car; shops, supermarkets and restaurants are right downstairs along Via Sampierdarena. Free parking is easy to find in the area, a real advantage for staff travelling by car.</p>
+        <div class="apt-map">
+          <iframe src="https://www.google.com/maps?q=Via+Sampierdarena+17,+16149+Genova&output=embed" loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade" title="Map — Via Sampierdarena 17 — B, Genoa"></iframe>
+        </div>
+      </div>
+      <div class="rv-block">
+        <div class="rv-divider"></div>
+        <h3 class="detail-h3">Close to the main work hubs</h3>
+        <ul class="included-list work-list">
+          <li>Port of Genoa, terminals and ship-repair yards a few minutes away</li>
+          <li>Hitachi Rail in the district and Ansaldo Energia (Campi area) about 10 minutes away</li>
+          <li>Fincantieri Sestri Ponente, ABB (Via Albareto) and the Erzelli technology park 10-15 minutes by car</li>
+          <li>Istituto Italiano di Tecnologia (IIT, Via Morego) about 15 minutes by car</li>
+        </ul>
+      </div>
   </div>
 </section>
 
@@ -356,5 +381,45 @@
 </footer>
 
 <script src="/assets/apt.js"></script>
+<script>
+/* Miniature <-> slider: clic sulla miniatura cambia la slide; le frecce sincronizzano la miniatura. */
+(function () {
+  'use strict';
+  var slider = document.getElementById('galleryMain');
+  var strip = document.getElementById('rvThumbs');
+  if (!slider || !strip) return;
+  var thumbs = Array.prototype.slice.call(strip.querySelectorAll('.rv-thumb'));
+  var slides = Array.prototype.slice.call(slider.querySelectorAll('.gallery-slide'));
+  function currentIndex() {
+    for (var i = 0; i < slides.length; i++) { if (slides[i].classList.contains('active')) return i; }
+    return 0;
+  }
+  function centerThumb(i) {
+    var t = thumbs[i];
+    if (!t) return;
+    strip.scrollLeft = t.offsetLeft - strip.clientWidth / 2 + t.offsetWidth / 2;
+  }
+  function syncThumbs() {
+    var cur = currentIndex();
+    thumbs.forEach(function (t, i) { t.classList.toggle('active', i === cur); });
+    centerThumb(cur);
+  }
+  thumbs.forEach(function (t, i) {
+    t.addEventListener('click', function () {
+      slides.forEach(function (s, j) { s.classList.toggle('active', j === i); });
+      var counter = document.getElementById('galleryMain-counter');
+      if (counter) counter.textContent = (i + 1) + ' / ' + slides.length;
+      syncThumbs();
+    });
+  });
+  if (typeof window.galleryGo === 'function') {
+    var origGo = window.galleryGo;
+    window.galleryGo = function (id, dir) {
+      origGo(id, dir);
+      if (id === 'galleryMain') syncThumbs();
+    };
+  }
+})();
+</script>
 </body>
 </html>
