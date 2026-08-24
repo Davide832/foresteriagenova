@@ -357,6 +357,7 @@ section { padding: 6rem 4rem; }
   color: var(--white); line-height: 1;
 }
 .side-price .mo { font-size: 1rem; color: rgba(255,255,255,.45); }
+.side-price-request { font-size: 1.9rem; }
 .side-price-note {
   font-size: .72rem; color: rgba(255,255,255,.4);
   font-style: italic; line-height: 1.6;
