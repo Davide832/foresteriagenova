@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- v=3.8 | 2026-09-06 -->
+<!-- v=3.9 | 2026-09-06 -->
 <html lang="it">
 <head>
   <meta charset="UTF-8" />
@@ -472,6 +472,17 @@
       align-items: end;
       margin-bottom: 4rem;
     }
+    .apt-avail-strip {
+      margin-top: 1.4rem;
+      font-size: .72rem; font-weight: 500;
+      letter-spacing: .15em; text-transform: uppercase;
+    }
+    .apt-avail-strip a {
+      color: var(--gold); text-decoration: none;
+      border-bottom: 1px solid rgba(184,151,90,.4); padding-bottom: 2px;
+      transition: color .2s, border-color .2s;
+    }
+    .apt-avail-strip a:hover { color: var(--dark); border-color: var(--dark); }
     .apt-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
@@ -1536,6 +1547,7 @@
     <p class="section-lead reveal">
       Cinque appartamenti completamente ristrutturati e arredati a Genova, in posizione strategica rispetto alle principali infrastrutture: caselli autostradali, stazione ferroviaria e aree produttive del ponente e della Valpolcevera.
     </p>
+    <p class="apt-avail-strip reveal"><a href="#contatti">Nuove disponibilità da febbraio 2027 &#8594;</a></p>
   </div>
   <div class="apt-grid">
     <!-- Card 1 -->
