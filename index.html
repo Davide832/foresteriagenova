@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- v=3.6 | 2026-08-24 -->
+<!-- v=3.7 | 2026-09-06 -->
 <html lang="it">
 <head>
   <meta charset="UTF-8" />
@@ -511,6 +511,18 @@
       letter-spacing: .15em;
       text-transform: uppercase;
       padding: .35rem .9rem;
+    }
+    .apt-occ-tag {
+      position: absolute; top: 3.1rem; left: 1.2rem;
+      background: var(--gold);
+      color: var(--dark);
+      font-size: .62rem;
+      font-weight: 500;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      padding: .32rem .8rem;
+      z-index: 4;
+      pointer-events: none;
     }
     .apt-body { padding: 2rem; }
     .apt-name {
@@ -1774,14 +1786,7 @@
     <div class="apt-card reveal">
       <div class="apt-img-wrap" id="card-sestri">
         <a class="apt-img-link" href="/appartamenti/sestri/" aria-label="Scheda completa dell'appartamento uso foresteria di Via San Giovanni Battista 53, Sestri Ponente">
-        <div class="apt-img-placeholder">
-          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
-            <rect x="3" y="3" width="18" height="18" rx="2"/>
-            <circle cx="8.5" cy="8.5" r="1.5"/>
-            <polyline points="21 15 16 10 5 21"/>
-          </svg>
-          <span>Foto in arrivo</span>
-        </div>
+        <img width="1200" height="1600" loading="lazy" decoding="async" src="/img/sampierdarena-b/SampierdarenaB-7.jpg" alt="Interni di riferimento dei nostri appartamenti – foresteria Sestri Ponente, Genova" style="width:100%;height:100%;object-fit:cover;display:block;">
         </a>
         <span class="apt-zone">Sestri Ponente</span>
       </div>
@@ -1844,14 +1849,7 @@
     <div class="apt-card reveal">
       <div class="apt-img-wrap" id="card-sampierdarena-c">
         <a class="apt-img-link" href="/appartamenti/sampierdarena-c/" aria-label="Scheda completa dell'appartamento uso foresteria C di Corso Martinetti 125, Sampierdarena">
-        <div class="apt-img-placeholder">
-          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
-            <rect x="3" y="3" width="18" height="18" rx="2"/>
-            <circle cx="8.5" cy="8.5" r="1.5"/>
-            <polyline points="21 15 16 10 5 21"/>
-          </svg>
-          <span>Foto in arrivo</span>
-        </div>
+        <img width="1200" height="1600" loading="lazy" decoding="async" src="/img/sampierdarena-a/SampierdarenaA-10.jpg" alt="Interni di riferimento dei nostri appartamenti – foresteria Corso Martinetti, Sampierdarena" style="width:100%;height:100%;object-fit:cover;display:block;">
         </a>
         <span class="apt-zone">Sampierdarena</span>
       </div>
@@ -2772,20 +2770,10 @@
           const dataFmt = parts.length === 3
             ? parts[2] + '/' + parts[1] + '/' + parts[0]
             : apt.fino_al;
-          const overlay = document.createElement('div');
-          overlay.className = 'apt-overlay-occupato';
-          overlay.innerHTML = `
-              <div class="apt-overlay-occupato-icon">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
-                  <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
-                </svg>
-              </div>
-              <div class="apt-overlay-occupato-label">Non disponibile</div>
-              <div class="apt-overlay-occupato-title">Occupato</div>
-              <div class="apt-overlay-occupato-date">fino al ${dataFmt}</div>
-          `;
-          wrap.appendChild(overlay);
+          const tag = document.createElement('span');
+          tag.className = 'apt-occ-tag';
+          tag.textContent = 'Occupato fino al ' + dataFmt;
+          wrap.appendChild(tag);
         }
       }
     }
@@ -2798,7 +2786,7 @@
     .then(text => {
       if (text && text.trim().startsWith('{')) {
         // Rimuovi overlay esistenti prima di riapplicare
-        document.querySelectorAll('.apt-overlay-occupato').forEach(el => el.remove());
+        document.querySelectorAll('.apt-occ-tag').forEach(el => el.remove());
         applicaStato(JSON.parse(text));
       }
     })

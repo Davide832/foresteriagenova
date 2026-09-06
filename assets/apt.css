@@ -315,8 +315,8 @@ section { padding: 6rem 4rem; }
 }
 .apt-gallery .gallery-slide img { object-fit: contain; }
 .gallery-slider { position: relative; width: 100%; height: 100%; }
-.gallery-slide { position: absolute; inset: 0; opacity: 0; transition: opacity .4s ease; }
-.gallery-slide.active { opacity: 1; }
+.gallery-slide { position: absolute; inset: 0; opacity: 0; transition: opacity .4s ease; pointer-events: none; }
+.gallery-slide.active { opacity: 1; pointer-events: auto; }
 .gallery-slide img {
   width: 100%; height: 100%;
   object-fit: cover; display: block;
