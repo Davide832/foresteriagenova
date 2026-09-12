@@ -51,6 +51,54 @@
   </url>
 
   <url>
+    <loc>https://foresteriagenova.it/appartamenti/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://foresteriagenova.it/appartamenti/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://foresteriagenova.it/en/appartamenti/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://foresteriagenova.it/fr/appartamenti/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://foresteriagenova.it/es/appartamenti/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://foresteriagenova.it/appartamenti/"/>
+  </url>
+
+  <url>
+    <loc>https://foresteriagenova.it/en/appartamenti/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://foresteriagenova.it/appartamenti/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://foresteriagenova.it/en/appartamenti/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://foresteriagenova.it/fr/appartamenti/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://foresteriagenova.it/es/appartamenti/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://foresteriagenova.it/appartamenti/"/>
+  </url>
+
+  <url>
+    <loc>https://foresteriagenova.it/fr/appartamenti/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://foresteriagenova.it/appartamenti/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://foresteriagenova.it/en/appartamenti/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://foresteriagenova.it/fr/appartamenti/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://foresteriagenova.it/es/appartamenti/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://foresteriagenova.it/appartamenti/"/>
+  </url>
+
+  <url>
+    <loc>https://foresteriagenova.it/es/appartamenti/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://foresteriagenova.it/appartamenti/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://foresteriagenova.it/en/appartamenti/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://foresteriagenova.it/fr/appartamenti/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://foresteriagenova.it/es/appartamenti/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://foresteriagenova.it/appartamenti/"/>
+  </url>
+
+  <url>
     <loc>https://foresteriagenova.it/appartamenti/bolzaneto/</loc>
     <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
