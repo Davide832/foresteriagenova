@@ -1,0 +1,72 @@
+# Foresteria Genova
+
+> Appartamenti uso foresteria a Genova per il personale aziendale in trasferta.
+> Cinque appartamenti arredati a Sampierdarena, Bolzaneto e Sestri Ponente,
+> affittati esclusivamente a persone giuridiche con contratto d'uso foresteria
+> registrato. Gestione diretta di Davide, privato locatore: nessuna agenzia.
+
+## Cosa offriamo
+- Appartamenti completamente arredati e attrezzati, da 70 a 112 mq, da 3 a 8 posti letto
+- Contratto d'uso foresteria registrato all'Agenzia delle Entrate (Codice Civile, non L. 431/98)
+- Canone interamente deducibile dal reddito d'impresa (art. 95 TUIR)
+- Nessuna tassazione del benefit per il dipendente se l'immobile e' fuori dal suo comune di residenza (art. 51 TUIR)
+- Utenze (luce, gas, acqua), internet e spese condominiali incluse fino a un massimale concordato, con conguaglio documentato
+- Copertura assicurativa RC verso terzi inclusa
+- Smart TV in ogni stanza, WiFi, lavatrice, riscaldamento autonomo; lavastoviglie e climatizzazione nella maggior parte delle unita'
+- Durata libera: da un mese a contratti pluriennali
+
+## A chi e' riservato
+Solo persone giuridiche: S.r.l., S.p.A., enti, associazioni, imprese. Il contratto e'
+intestato all'azienda, che vi alloggia dipendenti, collaboratori o amministratori.
+Non affittiamo a privati ne' a professionisti con partita IVA individuale.
+
+## I cinque appartamenti
+- Passo Pratogagliardo 2, Genova Bolzaneto/Pontedecimo: 112 mq, 6 vani, fino a 8 persone, 2 bagni. Vicino a IIT (Via Morego e laboratori di Pontedecimo), cantieri Valpolcevera, stazioni Genova San Biagio e Pontedecimo.
+- Via Sampierdarena 17 interno A, Genova Sampierdarena: 102 mq, 5 vani, fino a 6 persone, palazzo storico con ascensore, parcheggio gratuito in zona. Vicino a porto, Hitachi Rail, Ansaldo Energia.
+- Via Sampierdarena 17 interno B, Genova Sampierdarena: 109 mq, 6 vani, fino a 7 persone, terrazzo vivibile, ascensore, parcheggio gratuito in zona.
+- Via San Giovanni Battista 53, Genova Sestri Ponente: 70 mq, 3 vani, fino a 4 persone, posto auto incluso, ascensore. Vicino a Fincantieri, ABB (Via Albareto), aeroporto, parco Erzelli.
+- Corso Martinetti 125 interno C, Genova Sampierdarena: 75 mq, 3 vani, fino a 3 persone, terrazzo di 24 mq.
+
+## Prezzi
+Nessun listino pubblicato: il canone e' comunicato su richiesta in una proposta
+commerciale scritta, in base a durata, numero di persone e servizi. Tariffa di
+riferimento per contratti di 6-12 mesi; durate diverse su richiesta.
+
+## Come si prenota
+1. Richiesta via modulo, email o telefono: numero di persone, periodo, zona di lavoro
+2. Verifica di solvibilita' dell'azienda (visura camerale) e proposta commerciale scritta
+3. Caparra confirmatoria (art. 1385 c.c.): solo da questo momento l'appartamento e' riservato. Fino all'accredito resta proponibile ad altre aziende
+4. Firma del contratto e deposito cauzionale
+5. Registrazione del contratto a cura del locatore
+6. Prima mensilita' e quota degli oneri di registrazione
+7. Consegna delle chiavi, in genere entro 7 giorni lavorativi dalla documentazione completa
+
+## Disponibilita'
+Lo stato aggiornato di ogni appartamento e' su https://foresteriagenova.it/status.json
+e sulle singole schede. Gli appartamenti occupati sono prenotabili per i periodi successivi.
+
+## Contatti
+Email: foresteriagenova@gmail.com
+Telefono: +39 393 952 3985
+Risposta entro 24 ore lavorative. Lingue: italiano, inglese, francese, spagnolo.
+
+## Pagine principali
+- Home: https://foresteriagenova.it/
+- Tutti gli appartamenti: https://foresteriagenova.it/appartamenti/
+- Passo Pratogagliardo 2: https://foresteriagenova.it/appartamenti/bolzaneto/
+- Via Sampierdarena 17 A: https://foresteriagenova.it/appartamenti/sampierdarena-a/
+- Via Sampierdarena 17 B: https://foresteriagenova.it/appartamenti/sampierdarena-b/
+- Via San Giovanni Battista 53: https://foresteriagenova.it/appartamenti/sestri/
+- Corso Martinetti 125 C: https://foresteriagenova.it/appartamenti/sampierdarena-c/
+- FAQ (13 domande su contratto, fiscalita', costi, prenotazione): https://foresteriagenova.it/#faq
+- English: https://foresteriagenova.it/en/ | Francais: https://foresteriagenova.it/fr/ | Espanol: https://foresteriagenova.it/es/
+- Privacy: https://foresteriagenova.it/privacy/
+
+## English summary
+Corporate housing in Genoa, Italy: five furnished apartments in Sampierdarena,
+Bolzaneto and Sestri Ponente, let only to companies and legal entities under a
+registered Italian "uso foresteria" contract. Rent is fully tax-deductible for
+the company; utilities and internet are included up to an agreed cap. No agency:
+managed directly by the owner, Davide. Quotes on request. Booking is confirmed
+only upon payment of the earnest money deposit (caparra confirmatoria).
+Contact: foresteriagenova@gmail.com, +39 393 952 3985.
