@@ -382,6 +382,10 @@ section { padding: 6rem 4rem; }
   white-space: nowrap;
 }
 .apt-feat svg { color: var(--gold); flex-shrink: 0; }
+.apt-ape {
+  font-family: var(--sans); font-size: .78rem;
+  color: var(--mid); margin-top: 1rem;
+}
 .included-list { list-style: none; display: flex; flex-direction: column; gap: .7rem; }
 .included-list li {
   display: flex; align-items: flex-start; gap: .6rem;
