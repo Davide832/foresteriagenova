@@ -19,6 +19,10 @@
     "sampierdarena_c": {
       "occupato": true,
       "fino_al": "2027-12-31"
+    },
+    "partner_valverde_40a": {
+      "occupato": false,
+      "fino_al": null
     }
   }
 }

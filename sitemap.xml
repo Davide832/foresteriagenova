@@ -339,8 +339,63 @@
   </url>
 
   <url>
+    <loc>https://foresteriagenova.it/partner/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://foresteriagenova.it/partner/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://foresteriagenova.it/en/partner/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://foresteriagenova.it/fr/partner/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://foresteriagenova.it/es/partner/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://foresteriagenova.it/partner/"/>
+  </url>
+
+  <url>
+    <loc>https://foresteriagenova.it/en/partner/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://foresteriagenova.it/partner/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://foresteriagenova.it/en/partner/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://foresteriagenova.it/fr/partner/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://foresteriagenova.it/es/partner/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://foresteriagenova.it/partner/"/>
+  </url>
+
+  <url>
+    <loc>https://foresteriagenova.it/fr/partner/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://foresteriagenova.it/partner/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://foresteriagenova.it/en/partner/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://foresteriagenova.it/fr/partner/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://foresteriagenova.it/es/partner/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://foresteriagenova.it/partner/"/>
+  </url>
+
+  <url>
+    <loc>https://foresteriagenova.it/es/partner/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://foresteriagenova.it/partner/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://foresteriagenova.it/en/partner/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://foresteriagenova.it/fr/partner/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://foresteriagenova.it/es/partner/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://foresteriagenova.it/partner/"/>
+  </url>
+
+  <url>
+    <loc>https://foresteriagenova.it/proprietari/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
     <loc>https://foresteriagenova.it/privacy/</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-11</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>
   </url>

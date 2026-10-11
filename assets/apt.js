@@ -1,6 +1,6 @@
 /* ═══════════════════════════════════════════════════════════════
    ForesteriaGenova.it — JS condiviso pagine appartamento
-   v=3.0 | 2026-07-28
+   v=4.7 | 2026-10-11
    ═══════════════════════════════════════════════════════════════ */
 (function () {
   'use strict';
@@ -152,6 +152,16 @@
           form.style.display = 'none';
           var ok = document.getElementById('formSuccess');
           if (ok) ok.style.display = 'block';
+          /* Schede partner (v4.7): copia integrale della richiesta a Foresteria Genova.
+             data-copy-key = chiave Web3Forms di Davide, data-copy-slug = scheda. */
+          var copyKey = form.getAttribute('data-copy-key');
+          if (copyKey) {
+            var copy = new FormData(form);
+            copy.set('access_key', copyKey);
+            copy.set('subject', 'Copia richiesta scheda partner: ' + (form.getAttribute('data-copy-slug') || ''));
+            copy.set('copia_per', 'Foresteria Genova (per conoscenza)');
+            fetch('https://api.web3forms.com/submit', { method: 'POST', body: copy }).catch(function () {});
+          }
         } else {
           if (btn) { btn.disabled = false; btn.textContent = originalText; }
         }
