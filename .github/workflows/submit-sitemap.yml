@@ -1,0 +1,39 @@
+name: Invio sitemap a Google, Bing e IndexNow
+
+# Parte da solo dopo ogni pubblicazione di GitHub Pages ("pages-build-deployment"),
+# ogni lunedì mattina come rete di sicurezza, e a richiesta dal tab Actions ("Run workflow").
+# Credenziali nei Secrets del repository: GSC_SERVICE_ACCOUNT_JSON e BING_API_KEY.
+# Senza secrets il passo corrispondente viene saltato con un avviso (IndexNow non ne ha bisogno).
+
+on:
+  workflow_run:
+    workflows: ["pages-build-deployment"]
+    types: [completed]
+  schedule:
+    - cron: "17 5 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: submit-sitemap
+  cancel-in-progress: false
+
+jobs:
+  submit:
+    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Dipendenze
+        run: pip install --quiet --disable-pip-version-check requests google-auth
+      - name: Invio sitemap
+        env:
+          GSC_SERVICE_ACCOUNT_JSON: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}
+          BING_API_KEY: ${{ secrets.BING_API_KEY }}
+        run: python .github/scripts/submit_sitemap.py
