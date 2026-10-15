@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- v=4.7 | 2026-10-11 -->
+<!-- v=4.9 | 2026-10-15 -->
 <html lang="it">
 <head>
   <meta charset="UTF-8" />
@@ -487,12 +487,15 @@
 
     /* ── IN BREVE (fatti chiave, citabili) ── */
     #in-breve { padding: 2.6rem 4rem; background: var(--white); border-top: 1px solid rgba(184,151,90,.15); border-bottom: 1px solid rgba(184,151,90,.15); }
-    .kf-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 2rem; }
+    .kf-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; max-width: 1500px; margin: 0 auto; align-items: start; }
+    .kf-grid > div { padding: .2rem 1.6rem .2rem 0; }
+    .kf-grid > div + div { border-left: 1px solid rgba(184,151,90,.28); padding-left: 1.6rem; }
     .kf-label { font-size: .62rem; font-weight: 500; letter-spacing: .18em; text-transform: uppercase; color: var(--gold); margin-bottom: .35rem; }
     .kf-value { font-family: var(--serif); font-size: 1.05rem; font-weight: 400; color: var(--dark); line-height: 1.35; }
-    .kf-tag { margin-top: 1.6rem; font-size: .78rem; color: var(--light); font-weight: 300; letter-spacing: .02em; }
-    @media (max-width: 1024px) { #in-breve { padding: 2.2rem 2rem; } .kf-grid { grid-template-columns: repeat(2, 1fr); gap: 1.4rem; } }
-    @media (max-width: 640px) { .kf-grid { grid-template-columns: 1fr; } }
+    .kf-tag { margin: 1.6rem auto 0; max-width: 1500px; font-size: .78rem; color: var(--light); font-weight: 300; letter-spacing: .02em; }
+    @media (max-width: 1024px) { #in-breve { padding: 2.2rem 2rem; } .kf-grid { grid-template-columns: repeat(2, 1fr); gap: 1.2rem 0; }
+      .kf-grid > div + div { border-left: none; padding-left: 0; } .kf-grid > div:nth-child(even) { border-left: 1px solid rgba(184,151,90,.28); padding-left: 1.4rem; } }
+    @media (max-width: 640px) { .kf-grid { grid-template-columns: 1fr; gap: .9rem; } .kf-grid > div, .kf-grid > div:nth-child(even) { border-left: none; padding-left: 0; } }
     /* ── APPARTAMENTI ── */
     #appartamenti { background: var(--warm); }
     .apt-intro {
@@ -514,6 +517,10 @@
     }
     .apt-avail-strip a:hover { color: var(--dark); border-color: var(--dark); }
     .apt-index-link { margin-top: .5rem; }
+    .apt-links { grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: baseline; gap: .9rem 3rem;
+      margin-top: .6rem; padding-top: 1.3rem; border-top: 1px solid rgba(184,151,90,.28); }
+    .apt-links .apt-avail-strip { margin: 0; }
+    .apt-links .apt-avail-strip.apt-index-link { margin: 0; }
     .apt-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
@@ -1600,9 +1607,11 @@
     <p class="section-lead reveal">
       Cinque appartamenti completamente ristrutturati e arredati a Genova, in posizione strategica rispetto alle principali infrastrutture: caselli autostradali, stazione ferroviaria e aree produttive del ponente e della Valpolcevera.
     </p>
-    <p class="apt-avail-strip reveal"><a href="#contatti">Nuove disponibilità da febbraio 2027 &#8594;</a></p>
-    <p class="apt-avail-strip apt-index-link reveal"><a href="/appartamenti/">Tutte le schede degli appartamenti &#8594;</a></p>
-    <p class="apt-avail-strip apt-index-link reveal"><a href="/partner/">Appartamenti partner: immobili di altri proprietari, stesso standard &#8594;</a></p>
+    <div class="apt-links reveal">
+      <p class="apt-avail-strip apt-index-link"><a href="/appartamenti/">Tutte le schede degli appartamenti &#8594;</a></p>
+      <p class="apt-avail-strip apt-index-link"><a href="/partner/">Appartamenti partner: immobili di altri proprietari, stesso standard &#8594;</a></p>
+      <p class="apt-avail-strip"><a href="#contatti">Nuove disponibilità da febbraio 2027 &#8594;</a></p>
+    </div>
   </div>
   <div class="apt-grid">
     <!-- Card 1 -->
