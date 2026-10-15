@@ -1,6 +1,6 @@
 /* ═══════════════════════════════════════════════════════════════
    ForesteriaGenova.it — JS condiviso pagine appartamento
-   v=4.7 | 2026-10-11
+   v=4.8 | 2026-10-15
    ═══════════════════════════════════════════════════════════════ */
 (function () {
   'use strict';
@@ -142,7 +142,7 @@
     var btn = form.querySelector('.btn-submit');
     var originalText = btn ? btn.textContent : '';
     if (btn) { btn.disabled = true; btn.textContent = '…'; }
-    fetch('https://api.web3forms.com/submit', {
+    fetch(form.getAttribute('action') || 'https://api.web3forms.com/submit', {
       method: 'POST',
       body: new FormData(form)
     })
