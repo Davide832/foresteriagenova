@@ -23,6 +23,10 @@
     "partner_valverde_40a": {
       "occupato": false,
       "fino_al": null
+    },
+    "partner_piandilucco_7": {
+      "occupato": false,
+      "fino_al": null
     }
   }
 }
