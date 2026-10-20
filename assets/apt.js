@@ -1,6 +1,6 @@
 /* ═══════════════════════════════════════════════════════════════
    ForesteriaGenova.it — JS condiviso pagine appartamento
-   v=5.3 | 2026-10-20
+   v=5.4 | 2026-10-20
    ═══════════════════════════════════════════════════════════════ */
 (function () {
   'use strict';
@@ -106,6 +106,23 @@
         e.stopPropagation();
         openLightbox(imgs, i);
       });
+    });
+  });
+
+  /* ── Video dell'appartamento (v5.4): il player esterno (YouTube/Vimeo/Drive) si carica solo al clic ── */
+  document.querySelectorAll('.apt-video-embed').forEach(function (box) {
+    var btn = box.querySelector('.apt-video-play');
+    if (!btn) return;
+    btn.addEventListener('click', function () {
+      var f = document.createElement('iframe');
+      f.src = box.getAttribute('data-embed');
+      f.title = box.getAttribute('data-title') || '';
+      f.setAttribute('allow', 'autoplay; fullscreen; picture-in-picture; encrypted-media');
+      f.setAttribute('allowfullscreen', '');
+      f.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
+      box.innerHTML = '';
+      box.appendChild(f);
+      box.classList.add('playing');
     });
   });
 

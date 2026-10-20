@@ -245,7 +245,7 @@ section { padding: 6rem 4rem; }
   gap: clamp(2.5rem, 5vw, 5rem);
   align-items: start;
 }
-.rv-media { position: sticky; top: 96px; }
+.rv-media { position: sticky; top: 96px; min-width: 0; }   /* v5.4: min-width 0 = la striscia miniature (30 foto) non allarga la colonna in mobile */
 .rv-media .apt-gallery { box-shadow: 0 30px 70px rgba(28,26,22,.14); }
 .rv-media .gallery-btn {
   background: none;
@@ -676,3 +676,44 @@ footer {
 .nav-6 .nav-links { gap: 1.5rem; }
 .nav-6 .nav-links a { font-size: .68rem; white-space: nowrap; }
 @media (max-width: 1300px) { .nav-6 .nav-links { display: none; } .nav-6 .hamburger { display: flex; } }
+
+/* ── VIDEO dell'appartamento (v5.4): il player esterno si carica solo al clic ── */
+.apt-video {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  background: var(--dark);
+  border: 1px solid rgba(184,151,90,.2);
+  overflow: hidden;
+}
+.apt-video img, .apt-video video, .apt-video iframe { width: 100%; height: 100%; display: block; border: 0; }
+.apt-video img { object-fit: cover; opacity: .9; }
+.apt-video-play {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  border: 0; padding: 0; cursor: pointer;
+  background: linear-gradient(rgba(28,26,22,.08), rgba(28,26,22,.5));
+  display: flex; align-items: center; justify-content: center;
+}
+.apt-video-play span {
+  width: 78px; height: 78px; border-radius: 50%;
+  background: rgba(28,26,22,.72);
+  border: 1.5px solid var(--gold-lt);
+  color: var(--gold-lt);
+  display: flex; align-items: center; justify-content: center;
+  transition: transform .25s, background .25s, color .25s;
+}
+.apt-video-play span svg { margin-left: 5px; }
+.apt-video-play:hover span { transform: scale(1.06); background: var(--gold); color: var(--dark); }
+.apt-video-note {
+  font-size: .78rem; color: var(--light); font-weight: 300; line-height: 1.6;
+  margin-top: .75rem;
+}
+.apt-video-note a { color: var(--gold); text-decoration: none; border-bottom: 1px solid rgba(184,151,90,.4); }
+.apt-video-link { margin-top: .9rem; }
+.rv-video-jump {
+  display: inline-flex; align-items: center; gap: .45rem;
+  margin-top: .9rem;
+  font-size: .72rem; letter-spacing: .14em; text-transform: uppercase;
+  color: var(--gold); text-decoration: none;
+  transition: color .25s;
+}
+.rv-video-jump:hover { color: var(--dark); }
