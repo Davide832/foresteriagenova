@@ -21,8 +21,8 @@
       "fino_al": "2027-12-31"
     },
     "partner_valverde_40a": {
-      "occupato": false,
-      "fino_al": null
+      "occupato": true,
+      "fino_al": "2027-05-31"
     },
     "partner_piandilucco_7": {
       "occupato": false,
