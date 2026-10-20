@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- v=4.7 | 2026-10-11 -->
+<!-- v=5.2 | 2026-10-20 -->
 <html lang="it">
 <head>
   <meta charset="UTF-8" />
@@ -207,7 +207,7 @@
 <section class="apt-detail rv-detail">
   <div class="rv-grid">
     <div class="rv-media">
-  <div class="apt-gallery reveal">
+  <div class="apt-gallery reveal" style="--gal-ratio: 1200 / 1600">
     <div class="gallery-slider" id="galleryMain">
         <div class="gallery-slide active"><img src="/img/sampierdarena-a/SampierdarenaA-1.jpg" alt="Ingresso e corridoio – appartamento uso foresteria A a Sampierdarena, Genova" width="1200" height="1600" decoding="async"></div>
         <div class="gallery-slide"><img src="/img/sampierdarena-a/SampierdarenaA-2.jpg" alt="Corridoio con armadio verso la zona pranzo – foresteria Sampierdarena, Genova" width="1200" height="1600" loading="lazy" decoding="async"></div>
@@ -479,6 +479,7 @@
       slides.forEach(function (s, j) { s.classList.toggle('active', j === i); });
       var counter = document.getElementById('galleryMain-counter');
       if (counter) counter.textContent = (i + 1) + ' / ' + slides.length;
+      if (typeof window.fitGallery === 'function') fitGallery(slider);
       syncThumbs();
     });
   });

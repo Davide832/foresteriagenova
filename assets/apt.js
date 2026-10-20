@@ -1,6 +1,6 @@
 /* ═══════════════════════════════════════════════════════════════
    ForesteriaGenova.it — JS condiviso pagine appartamento
-   v=4.8 | 2026-10-15
+   v=5.2 | 2026-10-20
    ═══════════════════════════════════════════════════════════════ */
 (function () {
   'use strict';
@@ -36,6 +36,18 @@
   }, { threshold: 0.12 });
   revealEls.forEach(function (el) { observer.observe(el); });
 
+  /* ── Gallery: il riquadro segue l'orientamento della foto attiva (v5.2) ── */
+  window.fitGallery = function (slider) {
+    if (!slider) return;
+    var box = slider.closest('.apt-gallery');
+    var img = slider.querySelector('.gallery-slide.active img');
+    if (!box || !img) return;
+    var w = img.naturalWidth || parseInt(img.getAttribute('width'), 10);
+    var h = img.naturalHeight || parseInt(img.getAttribute('height'), 10);
+    if (w > 0 && h > 0) box.style.setProperty('--gal-ratio', w + ' / ' + h);
+  };
+  document.querySelectorAll('.apt-gallery .gallery-slider').forEach(function (s) { fitGallery(s); });
+
   /* ── Gallery slider ── */
   window.galleryGo = function (id, dir) {
     var slider = document.getElementById(id);
@@ -48,6 +60,7 @@
     slides[next].classList.add('active');
     var counter = document.getElementById(id + '-counter');
     if (counter) counter.textContent = (next + 1) + ' / ' + slides.length;
+    fitGallery(slider);
   };
   window.galleryPrev = function (id) { galleryGo(id, -1); };
   window.galleryNext = function (id) { galleryGo(id, +1); };

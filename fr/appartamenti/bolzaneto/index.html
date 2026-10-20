@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- v=4.7 | 2026-10-11 -->
+<!-- v=5.2 | 2026-10-20 -->
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
@@ -202,7 +202,7 @@
 <section class="apt-detail rv-detail">
   <div class="rv-grid">
     <div class="rv-media">
-  <div class="apt-gallery reveal">
+  <div class="apt-gallery reveal" style="--gal-ratio: 1536 / 2048">
     <div class="gallery-slider" id="galleryMain">
         <div class="gallery-slide active"><img src="/img/prato/Prato-10.jpg" alt="Grande cuisine avec séjour – appartement usage foresteria à Bolzaneto, Gênes" width="1536" height="2048" decoding="async"></div>
         <div class="gallery-slide"><img src="/img/prato/Prato-11.jpg" alt="Séjour avec canapé-lit – logement d&#x27;entreprise Bolzaneto, Gênes" width="1536" height="2048" loading="lazy" decoding="async"></div>
@@ -475,6 +475,7 @@
       slides.forEach(function (s, j) { s.classList.toggle('active', j === i); });
       var counter = document.getElementById('galleryMain-counter');
       if (counter) counter.textContent = (i + 1) + ' / ' + slides.length;
+      if (typeof window.fitGallery === 'function') fitGallery(slider);
       syncThumbs();
     });
   });
