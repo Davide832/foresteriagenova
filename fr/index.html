@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- v=4.9 | 2026-10-15 -->
+<!-- v=5.6 | 2026-10-24 -->
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
@@ -2582,12 +2582,24 @@
     const answer = btn.nextElementSibling;
     const isOpen = btn.classList.contains('open');
     document.querySelectorAll('.faq-q.open').forEach(b => {
+      const a = b.nextElementSibling;
       b.classList.remove('open');
-      b.nextElementSibling.classList.remove('open');
+      a.style.maxHeight = a.scrollHeight + 'px';   // da "none" a un valore misurabile...
+      void a.offsetHeight;                          // ...reflow...
+      a.classList.remove('open');
+      a.style.maxHeight = '';                       // ...poi la transizione verso 0
     });
     if (!isOpen) {
       btn.classList.add('open');
       answer.classList.add('open');
+      /* v5.6: altezza reale del contenuto (prima 1200px fissi: su smartphone le risposte lunghe
+         venivano tagliate). A fine transizione il limite viene tolto, cosi' nulla resta nascosto. */
+      answer.style.maxHeight = (answer.scrollHeight + 48) + 'px';
+      answer.addEventListener('transitionend', function h(e) {
+        if (e.target !== answer || e.propertyName !== 'max-height') return;
+        if (answer.classList.contains('open')) answer.style.maxHeight = 'none';
+        answer.removeEventListener('transitionend', h);
+      });
     }
   }
 
