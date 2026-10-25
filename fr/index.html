@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- v=5.6 | 2026-10-24 -->
+<!-- v=5.7 | 2026-10-25 -->
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
@@ -790,6 +790,20 @@
     .faq-a.open { max-height: 1200px; padding-bottom: 1.5rem; }
     .faq-a strong { color: var(--dark); font-weight: 500; }
     .faq-a br + br { display: block; margin-top: .5rem; content: ''; }
+
+    /* ── FORESTERIE.IT (v5.7): il portale nato dalle richieste in eccesso ── */
+    #foresterie { background: var(--white); border-top: 1px solid rgba(184,151,90,.15); }
+    .fi-grid { display: grid; grid-template-columns: minmax(0, 62ch) minmax(260px, 340px); gap: clamp(2.5rem, 6vw, 6rem); align-items: start; }
+    .fi-text p { font-size: .95rem; color: var(--mid); font-weight: 300; line-height: 1.85; margin-bottom: 1.1rem; }
+    .fi-text strong { color: var(--dark); font-weight: 500; }
+    .fi-card { background: var(--dark); color: var(--white); padding: 2.2rem 2rem; }
+    .fi-card-label { font-family: var(--serif); font-size: 1.7rem; font-weight: 300; color: var(--gold-lt); margin-bottom: .6rem; }
+    .fi-card-text { font-size: .85rem; font-weight: 300; line-height: 1.7; color: rgba(255,255,255,.7); margin-bottom: 1.6rem; }
+    .fi-card .btn-primary { background: var(--gold); color: var(--dark); }
+    .fi-card .btn-primary:hover { background: var(--gold-lt); }
+    .fi-card-link { display: block; width: max-content; margin-top: 1.3rem; color: rgba(255,255,255,.7); }
+    .fi-card-link:hover { color: var(--gold-lt); }
+    @media (max-width: 900px) { .fi-grid { grid-template-columns: 1fr; } }
 
     /* ── CONTATTI ── */
     #contatti { background: var(--dark); }
@@ -2430,6 +2444,26 @@
   </div>
 </section>
 
+<!-- FORESTERIE.IT -->
+<section id="foresterie">
+  <div class="section-eyebrow reveal">Le projet</div>
+  <h2 class="section-title reveal">De Foresteria Genova<br>à <em>Foresterie.it</em></h2>
+  <div class="divider reveal"></div>
+  <div class="fi-grid">
+    <div class="fi-text reveal">
+      <p>Foresteria Genova reçoit en permanence plus de demandes que ses cinq appartements ne peuvent satisfaire : des entreprises qui cherchent des logements en usage foresteria à Gênes pour leur personnel et, de plus en plus souvent, des propriétaires qui demandent à publier ici leurs biens.</p>
+      <p>De ces demandes continues naît <strong>Foresterie.it</strong>, le portail d'annonces d'appartements en usage foresteria pour les entreprises : des fiches aux données homogènes, un contact direct avec le propriétaire, des villes qui ouvrent une à une à partir de Gênes.</p>
+      <p>C'est un projet de Davide, la même personne derrière Foresteria Genova. Ici, nous continuons à gérer directement nos cinq appartements ; sur Foresterie.it vous trouverez les biens des autres propriétaires.</p>
+    </div>
+    <aside class="fi-card reveal">
+      <div class="fi-card-label">foresterie.it</div>
+      <p class="fi-card-text">Annonces d'appartements en usage foresteria pour les entreprises, avec contact direct au propriétaire.</p>
+      <a class="btn-primary" href="https://foresterie.it" target="_blank" rel="noopener">Visiter Foresterie.it</a>
+      <a class="btn-ghost fi-card-link" href="https://foresterie.it/genova" target="_blank" rel="noopener">Les annonces de Gênes &#8594;</a>
+    </aside>
+  </div>
+</section>
+
 <!-- CONTATTI -->
 <section id="contatti">
   <div class="section-eyebrow reveal">Parlons-en</div>
@@ -2554,6 +2588,7 @@
     <!--email_off--><a href="mailto:foresteriagenova@gmail.com" style="color:rgba(255,255,255,.4); text-decoration:none;">foresteriagenova@gmail.com</a><!--/email_off-->
     &nbsp;·&nbsp; <a href="tel:+393939523985" style="color:rgba(255,255,255,.4); text-decoration:none;">+39 393 952 3985</a>
     &nbsp;·&nbsp; © 2026 foresteriagenova.it · Davide, bailleur privé · Gênes, Ligurie
+    &nbsp;·&nbsp; <a href="https://foresterie.it" style="color:rgba(255,255,255,.4); text-decoration:none;" target="_blank" rel="noopener">Foresterie.it</a>, le portail national : un projet de Davide
     &nbsp;·&nbsp; <a href="/privacy/" style="color:rgba(255,255,255,.4); text-decoration:none;">Privacy</a>
   </div>
 </footer>
